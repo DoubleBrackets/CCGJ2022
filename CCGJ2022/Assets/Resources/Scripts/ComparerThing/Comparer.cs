@@ -5,14 +5,28 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Comparer Object", fileName = "New Comparer Object")]
 public class Comparer : ScriptableObject
 {
+    [System.Serializable]
+    public struct Requirement 
+    {
+        public PotionAttributeScriptableObject attribute;
+
+        [RangeSlider(0,100)]
+        public RangeObject value;
+    }
     [SerializeField]
-    public Vector2 field;
-
-    [RangeSlider(-10,10)]
-    public RangeObject test;
+    List<Requirement> requirementList = new List<Requirement>();
 
 
-    void OnValidate() {
-        Debug.Log(test.min.ToString() + ", " + test.max.ToString());
+    public bool Compare(PotionAttributeCollection attributes) 
+    {
+        foreach (Requirement requirement in requirementList) 
+        {
+            float value = 0;
+            if (attributes.AttributeDict.ContainsKey(requirement.attribute)) 
+                value = attributes.AttributeDict[requirement.attribute];
+            if (!requirement.value.check(value)) 
+                return false;
+        }
+        return true;
     }
 }

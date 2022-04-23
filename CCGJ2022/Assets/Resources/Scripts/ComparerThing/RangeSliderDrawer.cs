@@ -22,6 +22,11 @@ public class RangeSlider : PropertyAttribute
 public struct RangeObject 
 {
     public float min, max;
+
+    public bool check(float val) 
+    {
+        return min <= val && val <= max;
+    }
 }
 
 [CustomPropertyDrawer(typeof(RangeSlider))]
