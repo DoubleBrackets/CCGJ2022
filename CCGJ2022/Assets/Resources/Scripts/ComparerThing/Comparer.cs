@@ -2,18 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public struct RangeObject 
-{
-    public float min, max;
-
-    public bool check(float val) 
-    {
-        return min <= val && val <= max;
-    }
-}
-
-
 //[CreateAssetMenu(menuName = "GameplayDataAssets/Comparer Asset", fileName = "New Comparer Object")]
 [System.Serializable]
 public class Comparer 

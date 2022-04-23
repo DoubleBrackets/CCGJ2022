@@ -15,10 +15,18 @@ public class RangeSliderDrawer : PropertyDrawer
         RangeSlider range = attribute as RangeSlider;
         float a = property.FindPropertyRelative("min").floatValue;
         float b = property.FindPropertyRelative("max").floatValue;
-        EditorGUI.LabelField(position, label.text);
+        
+        position = EditorGUI.PrefixLabel(position, GUIUtility.GetControlID(FocusType.Passive), label);
 
-        var sliderPos = new Rect(position.x + 145, position.y, position.width - 205, position.height);
-        EditorGUI.MinMaxSlider(sliderPos, ref a, ref b, range.minLim, range.maxLim);
+        int numberWidth = (int) position.width / 4;
+        int sliderWidth = (int) position.width / 2;
+        int padding = (int) position.width / 30;
+        var sliderRect = new Rect(position.x + numberWidth, position.y, sliderWidth, position.height);
+        var minRect = new Rect(position.x - padding, position.y, numberWidth, position.height);
+        var maxRect = new Rect(position.x + numberWidth + sliderWidth + padding, position.y, numberWidth, position.height);
+
+        // var sliderPos = new Rect(position.x + 145, position.y, position.width - 205, position.height);
+        EditorGUI.MinMaxSlider(sliderRect, ref a, ref b, range.minLim, range.maxLim);
         if(range.roundToInt)
         {
             if (a != property.FindPropertyRelative("min").floatValue)
@@ -27,12 +35,12 @@ public class RangeSliderDrawer : PropertyDrawer
                 b = (int)b;
         }
         // Draw label
-        var minLabel = new Rect(position.x + 85, position.y, 45, position.height);
-        var maxLabel = new Rect(position.width - 35, position.y, 45, position.height);
-        a = EditorGUI.FloatField(minLabel, a);
+        // var minLabel = new Rect(position.x + 85, position.y, 45, position.height);
+        // var maxLabel = new Rect(position.width - 35, position.y, 45, position.height);
+        a = EditorGUI.FloatField(minRect, a);
         if (a > b)
             a = b;
-        b = EditorGUI.FloatField(maxLabel, b);
+        b = EditorGUI.FloatField(maxRect, b);
         if (b < a)
             b = a;
         
