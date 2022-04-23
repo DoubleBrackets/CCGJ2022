@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 2110581077
+    locked: 0
+  - name: Cauldron
+    uniqueID: 545061263
+    locked: 0
+  - name: Mail
+    uniqueID: 2889578283
+    locked: 0
+  - name: Ingredients
+    uniqueID: 2590570467
+    locked: 0
