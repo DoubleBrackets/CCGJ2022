@@ -1,19 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.TextCore;
+using System.Linq;
+using UnityEditor;
 
-[CreateAssetMenu(fileName = "New Request Asset",menuName = "Request Asset")]
+[CreateAssetMenu(fileName = "New Request Asset",menuName = "GameplayDataAssets/Request Asset")]
 public class RequestScriptableObject : ScriptableObject
 {
     public TextAsset requestText;
+    [TextArea]
+    public List<string> texts;
 
-    public string GetRequestText()
+    public void OnValidate()
     {
-        return requestText.text;
+        AssetDatabase.Refresh();
+        texts = new List<string>(requestText.ToString().Split(new string[] { "#"}, System.StringSplitOptions.RemoveEmptyEntries));
+        texts = texts.Select(x => x.TrimStart(new char[] { '\r', '\n' })).ToList();
     }
 
-    
+    public string GetInitialRequestText()
+    {
+        return texts.Count > 0 ? texts[0] : string.Empty;
+    }
+
+    public string GetResponseText(int index)
+    {
+        return texts.Count > index ? texts[index] : string.Empty;
+    }
 }
 
 [System.Serializable]

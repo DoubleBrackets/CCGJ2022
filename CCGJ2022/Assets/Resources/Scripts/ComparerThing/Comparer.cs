@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Comparer Object", fileName = "New Comparer Object")]
+[CreateAssetMenu(menuName = "GameplayDataAssets/Comparer Asset", fileName = "New Comparer Object")]
 public class Comparer : ScriptableObject
 {
     [SerializeField]

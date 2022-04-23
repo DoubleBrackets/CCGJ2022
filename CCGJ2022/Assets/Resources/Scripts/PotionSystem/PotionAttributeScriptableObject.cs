@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Potion Attribute",fileName = "New Potion Attribute")]
+[CreateAssetMenu(menuName = "GameplayDataAssets/Potion Attribute Asset", fileName = "New Potion Attribute")]
 public class PotionAttributeScriptableObject : ScriptableObject
 {
     public Sprite attributeSprite;

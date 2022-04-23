@@ -9,8 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e34eb98f400ff94fa84596e9b21205a, type: 3}
-  m_Name: TestComparer
+  m_Script: {fileID: 11500000, guid: f6515429cdbcb734cb8f27022ab0eb73, type: 3}
+  m_Name: Request1
   m_EditorClassIdentifier: 
-  field: {x: 0, y: 0}
-  test: {x: 16, y: 42}
+  requestText: {fileID: 4900000, guid: edfb4c411d3d0b04fbf2ef64a38fd7d2, type: 3}
+  texts:
+  - 'Initial Request!
+
+'
+  - '
+
+    Response 1
+
+'
+  - '
+
+    Response 2 3
+
+'

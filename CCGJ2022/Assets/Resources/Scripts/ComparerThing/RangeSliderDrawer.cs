@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine.UIElements;
-
 public class RangeSlider : PropertyAttribute
 {
     public float minLim, maxLim;
