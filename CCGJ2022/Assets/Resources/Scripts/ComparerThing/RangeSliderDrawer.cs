@@ -8,11 +8,13 @@ using UnityEngine.UIElements;
 public class RangeSlider : PropertyAttribute
 {
     public float minLim, maxLim;
+    public bool roundToInt;
 
-    public RangeSlider(float minLim, float maxLim, bool roundToInt=false) 
+    public RangeSlider(float minLim, float maxLim,bool roundToInt = true) 
     {
         this.minLim = minLim;
         this.maxLim = maxLim;
+        this.roundToInt = roundToInt;
     }
 }
 
@@ -28,28 +30,33 @@ public class RangeSliderDrawer : PropertyDrawer
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
         EditorGUI.BeginProperty(position, label, property);
-        // Draw label
-        position = EditorGUI.PrefixLabel(position, GUIUtility.GetControlID(FocusType.Passive), label);
-
-        int numberWidth = (int) position.width / 6;
-        int sliderWidth = (int) position.width / 2;
-        int padding = (int) position.width / 12;
-
-        var sliderRect = new Rect(position.x + numberWidth + padding, position.y, sliderWidth, position.height);
-        var minRect = new Rect(position.x, position.y, numberWidth, position.height);
-        var maxRect = new Rect(position.x + numberWidth + sliderWidth + 2 * padding, position.y, numberWidth, position.height);
-        
+        //Min-Max Range slider
         RangeSlider range = attribute as RangeSlider;
         float a = property.FindPropertyRelative("min").floatValue;
         float b = property.FindPropertyRelative("max").floatValue;
-        EditorGUI.MinMaxSlider(sliderRect, GUIContent.none, ref a, ref b, range.minLim, range.maxLim);
-        property.FindPropertyRelative("min").floatValue = (int) a;
-        property.FindPropertyRelative("max").floatValue = (int) b;
+        EditorGUI.LabelField(position, label.text);
+
+        var sliderPos = new Rect(position.x + 145, position.y, position.width - 205, position.height);
+        EditorGUI.MinMaxSlider(sliderPos, ref a, ref b, range.minLim, range.maxLim);
+        if(range.roundToInt)
+        {
+            if (a != property.FindPropertyRelative("min").floatValue)
+                a = (int)a;
+            if (a != property.FindPropertyRelative("max").floatValue)
+                b = (int)b;
+        }
+        // Draw label
+        var minLabel = new Rect(position.x + 85, position.y, 45, position.height);
+        var maxLabel = new Rect(position.width - 35, position.y, 45, position.height);
+        a = EditorGUI.FloatField(minLabel, a);
+        if (a > b)
+            a = b;
+        b = EditorGUI.FloatField(maxLabel, b);
+        if (b < a)
+            b = a;
         
-        EditorGUI.PropertyField(minRect, property.FindPropertyRelative("min"), GUIContent.none);
-        EditorGUI.PropertyField(maxRect, property.FindPropertyRelative("max"), GUIContent.none);
-
-
+        property.FindPropertyRelative("min").floatValue = a;
+        property.FindPropertyRelative("max").floatValue = b;
         EditorGUI.EndProperty();
     }
 }
