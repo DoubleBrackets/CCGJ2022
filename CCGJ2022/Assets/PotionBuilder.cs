@@ -7,7 +7,7 @@ public class PotionBuilder : MonoBehaviour
     public IngredientObject dummyIngredientObject;
     [SerializeField]
     public SerializeablePotionAttributeDictionary readAttribute;
-    private PotionObject currentPotion;
+    protected PotionObject currentPotion;
 
 
     private void Awake()
