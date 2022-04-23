@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PotionBuilder : MonoBehaviour
 {
-    public PotionAttributeList sourceAttributeList;
+    public PotionAttributeCollection sourceAttributeList;
     private PotionObject currentPotion;
     private void Update()
     {

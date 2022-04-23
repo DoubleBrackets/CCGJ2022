@@ -2,21 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IngredientObject
+[CreateAssetMenu(menuName ="Ingredient Object",fileName = "New Ingredient Object")]
+public class IngredientObject : PotionAttributeCollection
 {
-    private PotionAttributeList attributeList;
+    public Sprite ingredientSprite;
+    public string ingredientName;
 
-    public PotionAttributeList AttributeList
+    [TextArea]
+    public string description;
+    public override void UpdateAttribute(List<IngredientObject> ingredientList)
     {
-        get => attributeList;
-    }
-    public IngredientObject(PotionAttributeList sourceAttributes)
-    {
-        attributeList = ScriptableObject.Instantiate(sourceAttributes);
-    }
-    
-    public void DisplayAttributes()
-    {
-        attributeList.DisplayAttributes();
+        Debug.Log("No.");
     }
 }

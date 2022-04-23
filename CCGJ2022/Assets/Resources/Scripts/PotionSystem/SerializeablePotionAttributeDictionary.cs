@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class SerializeableDictionary<keytype ,value> : Dictionary<keytype, value>,ISerializationCallbackReceiver
+public class SerializeablePotionAttributeDictionary : Dictionary<PotionAttributeScriptableObject, float>,ISerializationCallbackReceiver
 {
+    [SerializeField]
+    public float totalAmount = 0;
     [System.Serializable]
     public struct DataPair
     {
-        public keytype key;
-        public value data;
+        public PotionAttributeScriptableObject attribute;
+        [Range(0,100)] public float amount;
     }
 
 	[SerializeField]
@@ -19,13 +21,13 @@ public class SerializeableDictionary<keytype ,value> : Dictionary<keytype, value
 
 	void ISerializationCallbackReceiver.OnAfterDeserialize()
 	{
-        var buffer = new Dictionary<keytype, value>();
+        var buffer = new Dictionary<PotionAttributeScriptableObject, float>();
         readyToSerialize = true;
         for(int i = 0;i < shownData.Count;i++)
         {
-            if (shownData[i].key != null && !buffer.ContainsKey(shownData[i].key))
+            if (shownData[i].attribute != null && !buffer.ContainsKey(shownData[i].attribute))
             {
-                buffer.Add(shownData[i].key, shownData[i].data);
+                buffer.Add(shownData[i].attribute, shownData[i].amount);
             }
             else
             {
@@ -34,8 +36,12 @@ public class SerializeableDictionary<keytype ,value> : Dictionary<keytype, value
             }
         }
         this.Clear();
+        totalAmount = 0;
         foreach (var pair in buffer)
+        {
             Add(pair.Key,pair.Value);
+            totalAmount += pair.Value;
+        }
     }
 
 	void ISerializationCallbackReceiver.OnBeforeSerialize()
@@ -45,7 +51,7 @@ public class SerializeableDictionary<keytype ,value> : Dictionary<keytype, value
         shownData.Clear();
         foreach (var item in this)
         {
-            shownData.Add(new DataPair { key = item.Key, data = item.Value });
+            shownData.Add(new DataPair { attribute = item.Key, amount = item.Value });
         }
     }
 }

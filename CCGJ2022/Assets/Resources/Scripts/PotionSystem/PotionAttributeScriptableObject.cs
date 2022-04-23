@@ -6,10 +6,21 @@ using UnityEngine;
 public class PotionAttributeScriptableObject : ScriptableObject
 {
     public Sprite attributeSprite;
-    public string attributeName;
+    private string attributeName;
+    public string displayName;
+
+        [TextArea]
+        public string description;
+
+    public void OnValidate()
+    {
+        attributeName = this.name;
+        //Debug.Log(attributeName);
+    }
 
     public override string ToString()
-    {
+    { 
         return attributeName;
     }
 }
+ 

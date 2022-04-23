@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PotionObject
 {
-    private PotionAttributeList attributeList;
+    private PotionAttributeCollection attributeList;
     private List<IngredientObject> ingredientList;
-    public PotionObject(PotionAttributeList sourceAttributes)
+    public PotionObject(PotionAttributeCollection sourceAttributes)
     {
         attributeList = ScriptableObject.Instantiate(sourceAttributes);
     }
