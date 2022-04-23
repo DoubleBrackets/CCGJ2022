@@ -16,14 +16,16 @@ public class RangeSliderDrawer : PropertyDrawer
         float a = property.FindPropertyRelative("min").floatValue;
         float b = property.FindPropertyRelative("max").floatValue;
         
-        position = EditorGUI.PrefixLabel(position, GUIUtility.GetControlID(FocusType.Passive), label);
+        // position = EditorGUI.PrefixLabel(position, GUIUtility.GetControlID(FocusType.Passive), label);
 
-        int numberWidth = (int) position.width / 4;
-        int sliderWidth = (int) position.width / 2;
-        int padding = (int) position.width / 30;
-        var sliderRect = new Rect(position.x + numberWidth, position.y, sliderWidth, position.height);
-        var minRect = new Rect(position.x - padding, position.y, numberWidth, position.height);
-        var maxRect = new Rect(position.x + numberWidth + sliderWidth + padding, position.y, numberWidth, position.height);
+        int negPadding = 30;
+        int increaseSlider = 10;
+        int numberWidth = Mathf.Min((int) position.width / 4, 50);
+        int padding = 0;
+        int sliderWidth = (int) position.width - padding - 2 * numberWidth + negPadding;
+        var sliderRect = new Rect(position.x + numberWidth - negPadding - increaseSlider, position.y, sliderWidth + 2 * increaseSlider, position.height);
+        var minRect = new Rect(position.x - negPadding, position.y, numberWidth, position.height);
+        var maxRect = new Rect(position.x + numberWidth + sliderWidth + padding - negPadding , position.y, numberWidth, position.height);
 
         // var sliderPos = new Rect(position.x + 145, position.y, position.width - 205, position.height);
         EditorGUI.MinMaxSlider(sliderRect, ref a, ref b, range.minLim, range.maxLim);
