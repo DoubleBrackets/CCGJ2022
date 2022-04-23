@@ -28,17 +28,18 @@ public class PotionAttributeList : ScriptableObject
 
     public void DisplayAttributes()
     {
-        // foreach(var attr in attributeData)
-        // {
-            
-        // }
+        foreach(var attr in attributeData)
+        {
+            Debug.Log(attr);
+        }
     }
 
     public void UpdateAttribute(List<IngredientObject> ingredientList)  
     {
-        void combine(Dictionary<PotionAttributeScriptableObject, float> attributeData, PotionAttributeList attributeList)
+        attributeData.Clear();
+        foreach (var ingredient in ingredientList)
         {
-            foreach (var attribute in attributeList.attributeData)
+            foreach (var attribute in ingredient.AttributeList.attributeData)
             {
                 float value;
                 if (attributeData.TryGetValue(attribute.Key, out value))
@@ -50,12 +51,6 @@ public class PotionAttributeList : ScriptableObject
                     attributeData.Add(attribute.Key, attribute.Value);
                 }
             }
-        }
-
-        attributeData.Clear();
-        foreach (var ingredient in ingredientList)
-        {
-            combine(attributeData, ingredient.AttributeList);
         }
     }
 }
