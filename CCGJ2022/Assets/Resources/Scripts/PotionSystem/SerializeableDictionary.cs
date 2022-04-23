@@ -23,8 +23,10 @@ public class SerializeableDictionary<keytype ,value> : Dictionary<keytype, value
         readyToSerialize = true;
         for(int i = 0;i < shownData.Count;i++)
         {
-            if (shownData[i].key != null && !this.ContainsKey(shownData[i].key))
+            if (shownData[i].key != null && !buffer.ContainsKey(shownData[i].key))
+            {
                 buffer.Add(shownData[i].key, shownData[i].data);
+            }
             else
             {
                 readyToSerialize = false;
