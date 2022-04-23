@@ -1,1 +1,2 @@
 this is a test file
+maybe this is a merge conflict
