@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PotionAttributeCollection")]
+[CreateAssetMenu(menuName = "GameplayDataAssets/PotionAttributeCollection")]
 public class PotionAttributeCollection : ScriptableObject
 {
     [SerializeField]
