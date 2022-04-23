@@ -35,7 +35,7 @@ public class PotionAttributeCollection : ScriptableObject
         {
             if (ingredient.attributeDict.totalAmount == 0) continue;
             foreach (var attribute in ingredient.attributeDict)
-            {
+            {   
                 float normalizedIngredientAttributeAmount = attribute.Value / ingredient.attributeDict.totalAmount / ingredientList.Count * 100;
                 if (attributeDict.ContainsKey(attribute.Key))
                 {
