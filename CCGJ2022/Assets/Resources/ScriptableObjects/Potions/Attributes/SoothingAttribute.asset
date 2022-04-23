@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SoothingAttribute
   m_EditorClassIdentifier: 
   attributeSprite: {fileID: 0}
-  displayName: 
+  displayName: Soothing
   description: 

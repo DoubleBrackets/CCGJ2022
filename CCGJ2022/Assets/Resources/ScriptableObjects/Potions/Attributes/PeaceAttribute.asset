@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PeaceAttribute
   m_EditorClassIdentifier: 
   attributeSprite: {fileID: 0}
-  displayName: 
+  displayName: Peace
   description: 

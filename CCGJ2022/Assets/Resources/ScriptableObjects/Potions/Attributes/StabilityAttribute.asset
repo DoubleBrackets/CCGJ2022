@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: StabilityAttribute
   m_EditorClassIdentifier: 
   attributeSprite: {fileID: 0}
-  displayName: 
+  displayName: Stability
   description: 

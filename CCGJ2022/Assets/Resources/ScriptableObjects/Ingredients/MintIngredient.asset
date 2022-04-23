@@ -13,8 +13,16 @@ MonoBehaviour:
   m_Name: MintIngredient
   m_EditorClassIdentifier: 
   attributeDict:
-    totalAmount: 0
-    shownData: []
+    totalAmount: 100
+    shownData:
+    - attribute: {fileID: 11400000, guid: 74a413ca9a853b446920e37881bdb548, type: 2}
+      amount: 30
+    - attribute: {fileID: 11400000, guid: 86755b8bc46b2b14ea4af20124067ec0, type: 2}
+      amount: 30
+    - attribute: {fileID: 11400000, guid: 31cc795d4fff1524a9cbdf2c3f203db5, type: 2}
+      amount: 30
+    - attribute: {fileID: 11400000, guid: 8cfcd01ae6042f3479d5bfe28fd54b8d, type: 2}
+      amount: 10
   ingredientSprite: {fileID: 0}
-  ingredientName: 
+  ingredientName: Mint
   description: 

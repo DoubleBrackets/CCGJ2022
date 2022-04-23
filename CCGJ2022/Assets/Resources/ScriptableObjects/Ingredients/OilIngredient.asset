@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: OilIngredient
   m_EditorClassIdentifier: 
   attributeDict:
-    totalAmount: 0
-    shownData: []
+    totalAmount: 100
+    shownData:
+    - attribute: {fileID: 11400000, guid: 0cded1223dfd52d46a84d881bea7a277, type: 2}
+      amount: 75
+    - attribute: {fileID: 11400000, guid: 7ae11a87757ce92469daee0f6fe6d15f, type: 2}
+      amount: 15
+    - attribute: {fileID: 11400000, guid: 7b07363cc5ad4ff4cbab80803ceb260b, type: 2}
+      amount: 10
   ingredientSprite: {fileID: 0}
-  ingredientName: 
+  ingredientName: Oil
   description: 

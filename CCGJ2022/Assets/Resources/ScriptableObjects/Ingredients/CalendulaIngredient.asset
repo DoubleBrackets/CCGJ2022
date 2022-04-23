@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: CalendulaIngredient
   m_EditorClassIdentifier: 
   attributeDict:
-    totalAmount: 0
-    shownData: []
+    totalAmount: 100
+    shownData:
+    - attribute: {fileID: 11400000, guid: 74a413ca9a853b446920e37881bdb548, type: 2}
+      amount: 80
+    - attribute: {fileID: 11400000, guid: 0cded1223dfd52d46a84d881bea7a277, type: 2}
+      amount: 10
+    - attribute: {fileID: 11400000, guid: e24299c8fc3caef49accf13ae74a2de5, type: 2}
+      amount: 10
   ingredientSprite: {fileID: 0}
-  ingredientName: 
+  ingredientName: Calendula
   description: 

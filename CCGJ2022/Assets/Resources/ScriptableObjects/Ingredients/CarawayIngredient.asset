@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: CarawayIngredient
   m_EditorClassIdentifier: 
   attributeDict:
-    totalAmount: 0
-    shownData: []
+    totalAmount: 100
+    shownData:
+    - attribute: {fileID: 11400000, guid: 5018b0d2026a8ca4a9b7639922cb6131, type: 2}
+      amount: 70
+    - attribute: {fileID: 11400000, guid: 40f1825180572bd47bb688bdc76f0d08, type: 2}
+      amount: 20
+    - attribute: {fileID: 11400000, guid: 9c2534ed5b9e0af40b46572141ec7de8, type: 2}
+      amount: 10
   ingredientSprite: {fileID: 0}
-  ingredientName: 
+  ingredientName: Caraway
   description: 

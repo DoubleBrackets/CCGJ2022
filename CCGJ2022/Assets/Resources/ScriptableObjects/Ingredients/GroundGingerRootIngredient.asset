@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: GroundGingerRootIngredient
   m_EditorClassIdentifier: 
   attributeDict:
-    totalAmount: 0
-    shownData: []
+    totalAmount: 100
+    shownData:
+    - attribute: {fileID: 11400000, guid: 9c2534ed5b9e0af40b46572141ec7de8, type: 2}
+      amount: 40
+    - attribute: {fileID: 11400000, guid: 40f1825180572bd47bb688bdc76f0d08, type: 2}
+      amount: 40
+    - attribute: {fileID: 11400000, guid: 7ae11a87757ce92469daee0f6fe6d15f, type: 2}
+      amount: 20
   ingredientSprite: {fileID: 0}
-  ingredientName: 
+  ingredientName: Ground Ginger Root
   description: 

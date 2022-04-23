@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: ComfreyIngredient
   m_EditorClassIdentifier: 
   attributeDict:
-    totalAmount: 0
-    shownData: []
+    totalAmount: 100
+    shownData:
+    - attribute: {fileID: 11400000, guid: 74a413ca9a853b446920e37881bdb548, type: 2}
+      amount: 50
+    - attribute: {fileID: 11400000, guid: 0cded1223dfd52d46a84d881bea7a277, type: 2}
+      amount: 25
+    - attribute: {fileID: 11400000, guid: 8cfcd01ae6042f3479d5bfe28fd54b8d, type: 2}
+      amount: 25
   ingredientSprite: {fileID: 0}
-  ingredientName: 
+  ingredientName: Comfrey
   description: 

@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: YarrowIngredient
   m_EditorClassIdentifier: 
   attributeDict:
-    totalAmount: 0
-    shownData: []
+    totalAmount: 100
+    shownData:
+    - attribute: {fileID: 11400000, guid: 8cfcd01ae6042f3479d5bfe28fd54b8d, type: 2}
+      amount: 70
+    - attribute: {fileID: 11400000, guid: 40f1825180572bd47bb688bdc76f0d08, type: 2}
+      amount: 30
   ingredientSprite: {fileID: 0}
-  ingredientName: 
+  ingredientName: Yarrow
   description: 
