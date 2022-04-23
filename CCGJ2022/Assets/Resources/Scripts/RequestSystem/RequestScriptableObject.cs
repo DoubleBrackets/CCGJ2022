@@ -8,31 +8,27 @@ using UnityEditor;
 public class RequestScriptableObject : ScriptableObject
 {
     public TextAsset requestText;
-    [TextArea]
-    public List<string> texts;
-
+    [SerializeField]public string initialRequestText;
+    [SerializeField] public List<RequestResponse> responses;
     public void OnValidate()
     {
         AssetDatabase.Refresh();
-        texts = new List<string>(requestText.ToString().Split(new string[] { "#"}, System.StringSplitOptions.RemoveEmptyEntries));
+        var texts = new List<string>(requestText.ToString().Split(new string[] { "#"}, System.StringSplitOptions.RemoveEmptyEntries));
         texts = texts.Select(x => x.TrimStart(new char[] { '\r', '\n' })).ToList();
+
+        initialRequestText = texts.Count > 0 ? texts[0] : string.Empty;
+        for (int i = 0;i < responses.Count;i++)
+        {
+            responses[i].responseText = i + 1 < texts.Count ? texts[i + 1] : string.Empty;
+        }
     }
 
-    public string GetInitialRequestText()
-    {
-        return texts.Count > 0 ? texts[0] : string.Empty;
-    }
-
-    public string GetResponseText(int index)
-    {
-        return texts.Count > index ? texts[index] : string.Empty;
-    }
 }
 
 [System.Serializable]
 public class RequestResponse
 {
-    public TextAsset responseText;
-
-
+    [HideInInspector]public string dontask = "";
+    [TextArea]public string responseText;
+    public Comparer responseRequirements;
 }

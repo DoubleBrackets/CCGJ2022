@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "GameplayDataAssets/Comparer Asset", fileName = "New Comparer Object")]
-public class Comparer : ScriptableObject
+//[CreateAssetMenu(menuName = "GameplayDataAssets/Comparer Asset", fileName = "New Comparer Object")]
+[System.Serializable]
+public class Comparer 
 {
     [System.Serializable]
     public struct Requirement 
@@ -28,5 +29,29 @@ public class Comparer : ScriptableObject
                 return false;
         }
         return true;
+    }
+}
+
+public class RangeSlider : PropertyAttribute
+{
+    public float minLim, maxLim;
+    public bool roundToInt;
+
+    public RangeSlider(float minLim, float maxLim, bool roundToInt = true)
+    {
+        this.minLim = minLim;
+        this.maxLim = maxLim;
+        this.roundToInt = roundToInt;
+    }
+}
+
+[System.Serializable]
+public struct RangeObject
+{
+    public float min, max;
+
+    public bool check(float val)
+    {
+        return min <= val && val <= max;
     }
 }

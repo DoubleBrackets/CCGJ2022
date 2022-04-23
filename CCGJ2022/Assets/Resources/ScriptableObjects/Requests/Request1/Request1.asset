@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6515429cdbcb734cb8f27022ab0eb73, type: 3}
+  m_Name: Request1
+  m_EditorClassIdentifier: 
+  requestText: {fileID: 4900000, guid: 6b32ec92ef309e94697e37b54b35acc8, type: 3}
+  initialRequestText: 'Initial Request!
+
+'
+  responses:
+  - dontask: 
+    responseText: 'Response 1
+
+'
+    responseRequirements:
+      requirementList:
+      - attribute: {fileID: 0}
+        value:
+          min: 0
+          max: 0
+  - dontask: 
+    responseText: 'Reponse 2 this is a response
+
+'
+    responseRequirements:
+      requirementList: []

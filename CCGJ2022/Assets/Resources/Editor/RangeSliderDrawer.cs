@@ -4,29 +4,6 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine.UIElements;
-public class RangeSlider : PropertyAttribute
-{
-    public float minLim, maxLim;
-    public bool roundToInt;
-
-    public RangeSlider(float minLim, float maxLim,bool roundToInt = true) 
-    {
-        this.minLim = minLim;
-        this.maxLim = maxLim;
-        this.roundToInt = roundToInt;
-    }
-}
-
-[System.Serializable]
-public struct RangeObject 
-{
-    public float min, max;
-
-    public bool check(float val) 
-    {
-        return min <= val && val <= max;
-    }
-}
 
 [CustomPropertyDrawer(typeof(RangeSlider))]
 public class RangeSliderDrawer : PropertyDrawer
