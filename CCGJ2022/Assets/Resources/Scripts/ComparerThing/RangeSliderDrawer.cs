@@ -8,11 +8,13 @@ using UnityEngine.UIElements;
 public class RangeSlider : PropertyAttribute
 {
     public float minLim, maxLim;
+    public bool roundToInt;
 
-    public RangeSlider(float minLim, float maxLim) 
+    public RangeSlider(float minLim, float maxLim,bool roundToInt = true) 
     {
         this.minLim = minLim;
         this.maxLim = maxLim;
+        this.roundToInt = roundToInt;
     }
 }
 
@@ -30,10 +32,13 @@ public class RangeSliderDrawer : PropertyDrawer
 
         var sliderPos = new Rect(position.x + 145, position.y, position.width - 205, position.height);
         EditorGUI.MinMaxSlider(sliderPos, ref a, ref b, range.minLim, range.maxLim);
-        if(a != property.vector2Value[0])
-            a = (int)a;
-        if (a != property.vector2Value[1])
-            b = (int)b;
+        if(range.roundToInt)
+        {
+            if (a != property.vector2Value[0])
+                a = (int)a;
+            if (a != property.vector2Value[1])
+                b = (int)b;
+        }
         // Draw label
         var minLabel = new Rect(position.x + 85, position.y, 45, position.height);
         var maxLabel = new Rect(position.width - 35, position.y, 45, position.height);

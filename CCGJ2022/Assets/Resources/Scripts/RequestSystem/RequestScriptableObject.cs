@@ -8,8 +8,18 @@ public class RequestScriptableObject : ScriptableObject
 {
     public TextAsset requestText;
 
-    public void GetRequestText()
+    public string GetRequestText()
     {
-
+        return requestText.text;
     }
+
+    
+}
+
+[System.Serializable]
+public class RequestResponse
+{
+    public TextAsset responseText;
+
+
 }
