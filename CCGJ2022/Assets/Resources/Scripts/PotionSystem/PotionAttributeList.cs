@@ -5,26 +5,14 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "PotionAttributeLookup")]
 public class PotionAttributeList : ScriptableObject
 {
-    [System.Serializable]
-    struct DataPair {
-        public PotionAttributeScriptableObject attribute;
-        public float data;
-    }
     [SerializeField]
-    private List<DataPair> workingAttributes;
+    private PotionAttributeDictionary attributeData;
 
-    public PotionAttributeList()
+
+    public void OnValidate()
     {
-        // attributeData = new Dictionary<PotionAttributeScriptableObject, float>();
-        // foreach (var attribute in workingAttributes)
-        // {
-        //     attributeData.Add(attribute, 0);
-        // }
+        DisplayAttributes();
     }
-
-
-
-    public Dictionary<PotionAttributeScriptableObject, float> attributeData;
 
     public void DisplayAttributes()
     {
@@ -53,4 +41,9 @@ public class PotionAttributeList : ScriptableObject
             }
         }
     }
+}
+
+[System.Serializable]
+public class PotionAttributeDictionary : SerializeableDictionary<PotionAttributeScriptableObject, float>
+{ 
 }
