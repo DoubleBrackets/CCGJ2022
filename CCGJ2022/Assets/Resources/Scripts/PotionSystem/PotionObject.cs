@@ -5,6 +5,7 @@ using UnityEngine;
 public class PotionObject
 {
     private PotionAttributeList attributeList;
+    private List<IngredientObject> ingredientList;
     public PotionObject(PotionAttributeList sourceAttributes)
     {
         attributeList = ScriptableObject.Instantiate(sourceAttributes);
@@ -17,6 +18,8 @@ public class PotionObject
 
     public void AddIngredient(IngredientObject ingredient)
     {
-        
+        ingredientList.Add(ingredient);
+
+        attributeList.UpdateAttribute(ingredientList);
     }
 }
