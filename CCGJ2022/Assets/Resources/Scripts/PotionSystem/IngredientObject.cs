@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "GameplayDataAssets/Ingredient Asset", fileName = "New Ingredient Object")]
+[CreateAssetMenu(menuName ="Ingredient Object",fileName = "New Ingredient Object")]
 public class IngredientObject : PotionAttributeCollection
 {
     public Sprite ingredientSprite;

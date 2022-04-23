@@ -17,6 +17,17 @@ public class RangeSlider : PropertyAttribute
     }
 }
 
+[System.Serializable]
+public struct RangeObject 
+{
+    public float min, max;
+
+    public bool check(float val) 
+    {
+        return min <= val && val <= max;
+    }
+}
+
 [CustomPropertyDrawer(typeof(RangeSlider))]
 public class RangeSliderDrawer : PropertyDrawer
 {
@@ -25,17 +36,17 @@ public class RangeSliderDrawer : PropertyDrawer
         EditorGUI.BeginProperty(position, label, property);
         //Min-Max Range slider
         RangeSlider range = attribute as RangeSlider;
-        float a = property.vector2Value[0];
-        float b = property.vector2Value[1];
+        float a = property.FindPropertyRelative("min").floatValue;
+        float b = property.FindPropertyRelative("max").floatValue;
         EditorGUI.LabelField(position, label.text);
 
         var sliderPos = new Rect(position.x + 145, position.y, position.width - 205, position.height);
         EditorGUI.MinMaxSlider(sliderPos, ref a, ref b, range.minLim, range.maxLim);
         if(range.roundToInt)
         {
-            if (a != property.vector2Value[0])
+            if (a != property.FindPropertyRelative("min").floatValue)
                 a = (int)a;
-            if (a != property.vector2Value[1])
+            if (a != property.FindPropertyRelative("max").floatValue)
                 b = (int)b;
         }
         // Draw label
@@ -48,7 +59,8 @@ public class RangeSliderDrawer : PropertyDrawer
         if (b < a)
             b = a;
         
-        property.vector2Value = new Vector2(a, b);
+        property.FindPropertyRelative("min").floatValue = a;
+        property.FindPropertyRelative("max").floatValue = b;
         EditorGUI.EndProperty();
     }
 }
