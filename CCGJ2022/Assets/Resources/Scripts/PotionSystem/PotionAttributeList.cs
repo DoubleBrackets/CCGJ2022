@@ -6,8 +6,8 @@ using UnityEngine;
 public class PotionAttributeList : ScriptableObject
 {
 
-    public PotionAttributeList()
-    {
+    public void OnEnable()
+    { 
         attributeData = new Dictionary<PotionAttributeScriptableObject, float>();
         foreach (var attribute in workingAttributes)
         {
