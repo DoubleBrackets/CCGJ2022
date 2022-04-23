@@ -8,7 +8,7 @@ public class Comparer : ScriptableObject
     [SerializeField]
     public Vector2 field;
 
-    [RangeSlider(-10,10)]
+    [RangeSlider(0,100)]
     public Vector2 test;
 
 

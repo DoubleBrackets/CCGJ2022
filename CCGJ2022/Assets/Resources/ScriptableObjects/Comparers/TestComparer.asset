@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e34eb98f400ff94fa84596e9b21205a, type: 3}
   m_Name: TestComparer
   m_EditorClassIdentifier: 
-  field: 0
+  field: {x: 0, y: 0}
+  test: {x: 0, y: 30}

@@ -21,35 +21,30 @@ public class RangeSliderDrawer : PropertyDrawer
 {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
+        EditorGUI.BeginProperty(position, label, property);
+        //Min-Max Range slider
         RangeSlider range = attribute as RangeSlider;
         float a = property.vector2Value[0];
         float b = property.vector2Value[1];
-        EditorGUI.MinMaxSlider(position, label, ref a, ref b, range.minLim, range.maxLim);
-        property.vector2Value = new Vector2(a, b);
-        
-        
-        EditorGUI.BeginProperty(position, label, property);
+        EditorGUI.LabelField(position, label.text);
 
+        var sliderPos = new Rect(position.x + 145, position.y, position.width - 205, position.height);
+        EditorGUI.MinMaxSlider(sliderPos, ref a, ref b, range.minLim, range.maxLim);
+        if(a != property.vector2Value[0])
+            a = (int)a;
+        if (a != property.vector2Value[1])
+            b = (int)b;
         // Draw label
-        position = EditorGUI.PrefixLabel(position, GUIUtility.GetControlID(FocusType.Passive), label);
-
-        // Don't make child fields be indented
-        var indent = EditorGUI.indentLevel;
-        EditorGUI.indentLevel = 0;
-
-        // Calculate rects
-        var amountRect = new Rect(position.x, position.y, 30, position.height);
-        var unitRect = new Rect(position.x + 35, position.y, 50, position.height);
-        var nameRect = new Rect(position.x + 90, position.y, position.width - 90, position.height);
-
-        // Draw fields - pass GUIContent.none to each so they are drawn without labels
-        EditorGUI.PropertyField(amountRect, property.FindPropertyRelative("amount"), GUIContent.none);
-        EditorGUI.PropertyField(unitRect, property.FindPropertyRelative("unit"), GUIContent.none);
-        EditorGUI.PropertyField(nameRect, property.FindPropertyRelative("name"), GUIContent.none);
-
-        // Set indent back to what it was
-        EditorGUI.indentLevel = indent;
-
+        var minLabel = new Rect(position.x + 85, position.y, 45, position.height);
+        var maxLabel = new Rect(position.width - 35, position.y, 45, position.height);
+        a = EditorGUI.FloatField(minLabel, a);
+        if (a > b)
+            a = b;
+        b = EditorGUI.FloatField(maxLabel, b);
+        if (b < a)
+            b = a;
+        
+        property.vector2Value = new Vector2(a, b);
         EditorGUI.EndProperty();
     }
 }
