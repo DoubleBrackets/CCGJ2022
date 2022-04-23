@@ -23,7 +23,7 @@ public class PotionAttributeCollection : ScriptableObject
     {
         foreach (var attr in attributeDict)
         {
-            Debug.Log(attr);
+            // Debug.Log(attr);
         }
     }
 
