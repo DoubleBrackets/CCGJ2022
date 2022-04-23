@@ -23,6 +23,16 @@ public class RequestScriptableObject : ScriptableObject
         }
     }
 
+    private RequestResponse defaultResponse = new RequestResponse();
+    public RequestResponse EvaluatePotion(PotionObject potion) 
+    {
+        foreach (var response in responses) 
+        {
+            if (response.responseRequirements.Compare(potion.AttributeCollection))
+                return response;
+        }
+        return defaultResponse;
+    }
 }
 
 [System.Serializable]
