@@ -5,6 +5,13 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "PotionAttributeLookup")]
 public class PotionAttributeList : ScriptableObject
 {
+    [System.Serializable]
+    struct DataPair {
+        public PotionAttributeScriptableObject attribute;
+        public float data;
+    }
+    [SerializeField]
+    private List<DataPair> workingAttributes;
 
     public PotionAttributeList()
     {
@@ -15,16 +22,9 @@ public class PotionAttributeList : ScriptableObject
         // }
     }
 
-    [System.Serializable]
-    struct DataPair {
-        public PotionAttributeScriptableObject attribute;
-        public float data;
-    }
-    [SerializeField]
-    private List<DataPair> workingAttributes;
 
 
-    // public Dictionary<PotionAttributeScriptableObject, float> attributeData;
+    public Dictionary<PotionAttributeScriptableObject, float> attributeData;
 
     public void DisplayAttributes()
     {
@@ -32,5 +32,30 @@ public class PotionAttributeList : ScriptableObject
         // {
             
         // }
+    }
+
+    public void UpdateAttribute(List<IngredientObject> ingredientList)  
+    {
+        void combine(Dictionary<PotionAttributeScriptableObject, float> attributeData, PotionAttributeList attributeList)
+        {
+            foreach (var attribute in attributeList.attributeData)
+            {
+                float value;
+                if (attributeData.TryGetValue(attribute.Key, out value))
+                {
+                    value += attribute.Value;
+                }
+                else 
+                {
+                    attributeData.Add(attribute.Key, attribute.Value);
+                }
+            }
+        }
+
+        attributeData.Clear();
+        foreach (var ingredient in ingredientList)
+        {
+            combine(attributeData, ingredient.AttributeList);
+        }
     }
 }
