@@ -29,20 +29,23 @@ public class PotionAttributeCollection : ScriptableObject
 
     public virtual void UpdateAttribute(List<IngredientObject> ingredientList)  
     {
+        attributeDict.totalAmount = 0;
         attributeDict.Clear();
         foreach (var ingredient in ingredientList)
         {
             if (ingredient.attributeDict.totalAmount == 0) continue;
             foreach (var attribute in ingredient.attributeDict)
             {
-                if (attributeDict.TryGetValue(attribute.Key, out float value))
+                float normalizedIngredientAttributeAmount = attribute.Value / ingredient.attributeDict.totalAmount / ingredientList.Count * 100;
+                if (attributeDict.ContainsKey(attribute.Key))
                 {
-                    value += attribute.Value / ingredient.attributeDict.totalAmount / ingredientList.Count;
+                    attributeDict[attribute.Key] += normalizedIngredientAttributeAmount;
                 }
                 else 
                 {
-                    attributeDict.Add(attribute.Key, attribute.Value / ingredient.attributeDict.totalAmount / ingredientList.Count);
+                    attributeDict.Add(attribute.Key, normalizedIngredientAttributeAmount);
                 }
+                attributeDict.totalAmount += normalizedIngredientAttributeAmount;
             }
         }
     }

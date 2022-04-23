@@ -1325,7 +1325,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac3448745714fa74aac07507d6ae6893, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sourceAttributeList: {fileID: 11400000, guid: 4c541622c1b987341aac4d2715babc48, type: 2}
+  dummyIngredientObject: {fileID: 11400000, guid: bc7f91def161b0a4290199d92c311702, type: 2}
+  readAttribute:
+    totalAmount: 0
+    shownData: []
 --- !u!4 &845799636
 Transform:
   m_ObjectHideFlags: 0

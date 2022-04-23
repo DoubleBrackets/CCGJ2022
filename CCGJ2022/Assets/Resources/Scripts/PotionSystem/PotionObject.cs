@@ -4,22 +4,34 @@ using UnityEngine;
 
 public class PotionObject
 {
-    private PotionAttributeCollection attributeList;
-    private List<IngredientObject> ingredientList;
+    private PotionAttributeCollection attributeCollection;
+
+    public PotionAttributeCollection AttributeCollection
+    {
+        get => attributeCollection;
+    }
+
+    private List<IngredientObject> ingredientList = new List<IngredientObject>();
     public PotionObject(PotionAttributeCollection sourceAttributes)
     {
-        attributeList = ScriptableObject.Instantiate(sourceAttributes);
+        attributeCollection = ScriptableObject.Instantiate(sourceAttributes);
     }
 
     public void DisplayAttributes()
     {
-        attributeList.DisplayAttributes();
+        attributeCollection.DisplayAttributes();
     }
 
     public void AddIngredient(IngredientObject ingredient)
     {
         ingredientList.Add(ingredient);
 
-        attributeList.UpdateAttribute(ingredientList);
+        attributeCollection.UpdateAttribute(ingredientList);
+    }
+
+    public void ResetPotion()
+    {
+        ingredientList.Clear();
+        attributeCollection.UpdateAttribute(ingredientList);
     }
 }

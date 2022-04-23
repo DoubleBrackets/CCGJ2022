@@ -4,14 +4,32 @@ using UnityEngine;
 
 public class PotionBuilder : MonoBehaviour
 {
-    public PotionAttributeCollection sourceAttributeList;
+    public IngredientObject dummyIngredientObject;
+    [SerializeField]
+    public SerializeablePotionAttributeDictionary readAttribute;
     private PotionObject currentPotion;
+
+
+    private void Awake()
+    {
+        currentPotion = new PotionObject(ScriptableObject.CreateInstance<PotionAttributeCollection>());
+    }
+
     private void Update()
     {
-        if(Input.GetMouseButton(0))
-        {
-            currentPotion = new PotionObject(sourceAttributeList);
-        }
+        readAttribute = currentPotion.AttributeCollection.AttributeDict;
+    }
+
+    [ContextMenu("Reset Potion")]
+    public void ResetPotion()
+    {
+        currentPotion.ResetPotion();
+    }
+
+    [ContextMenu("Add dummy ingredient")]
+    public void AddDummyIngredient()
+    {
+        currentPotion.AddIngredient(dummyIngredientObject);
     }
 
 }
