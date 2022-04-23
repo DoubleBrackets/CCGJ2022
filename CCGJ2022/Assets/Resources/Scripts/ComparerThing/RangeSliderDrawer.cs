@@ -9,11 +9,17 @@ public class RangeSlider : PropertyAttribute
 {
     public float minLim, maxLim;
 
-    public RangeSlider(float minLim, float maxLim) 
+    public RangeSlider(float minLim, float maxLim, bool roundToInt=false) 
     {
         this.minLim = minLim;
         this.maxLim = maxLim;
     }
+}
+
+[System.Serializable]
+public struct RangeObject 
+{
+    public float min, max;
 }
 
 [CustomPropertyDrawer(typeof(RangeSlider))]
@@ -21,34 +27,28 @@ public class RangeSliderDrawer : PropertyDrawer
 {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
-        RangeSlider range = attribute as RangeSlider;
-        float a = property.vector2Value[0];
-        float b = property.vector2Value[1];
-        EditorGUI.MinMaxSlider(position, label, ref a, ref b, range.minLim, range.maxLim);
-        property.vector2Value = new Vector2(a, b);
-        
-        
         EditorGUI.BeginProperty(position, label, property);
-
         // Draw label
         position = EditorGUI.PrefixLabel(position, GUIUtility.GetControlID(FocusType.Passive), label);
 
-        // Don't make child fields be indented
-        var indent = EditorGUI.indentLevel;
-        EditorGUI.indentLevel = 0;
+        int numberWidth = (int) position.width / 6;
+        int sliderWidth = (int) position.width / 2;
+        int padding = (int) position.width / 12;
 
-        // Calculate rects
-        var amountRect = new Rect(position.x, position.y, 30, position.height);
-        var unitRect = new Rect(position.x + 35, position.y, 50, position.height);
-        var nameRect = new Rect(position.x + 90, position.y, position.width - 90, position.height);
+        var sliderRect = new Rect(position.x + numberWidth + padding, position.y, sliderWidth, position.height);
+        var minRect = new Rect(position.x, position.y, numberWidth, position.height);
+        var maxRect = new Rect(position.x + numberWidth + sliderWidth + 2 * padding, position.y, numberWidth, position.height);
+        
+        RangeSlider range = attribute as RangeSlider;
+        float a = property.FindPropertyRelative("min").floatValue;
+        float b = property.FindPropertyRelative("max").floatValue;
+        EditorGUI.MinMaxSlider(sliderRect, GUIContent.none, ref a, ref b, range.minLim, range.maxLim);
+        property.FindPropertyRelative("min").floatValue = (int) a;
+        property.FindPropertyRelative("max").floatValue = (int) b;
+        
+        EditorGUI.PropertyField(minRect, property.FindPropertyRelative("min"), GUIContent.none);
+        EditorGUI.PropertyField(maxRect, property.FindPropertyRelative("max"), GUIContent.none);
 
-        // Draw fields - pass GUIContent.none to each so they are drawn without labels
-        EditorGUI.PropertyField(amountRect, property.FindPropertyRelative("amount"), GUIContent.none);
-        EditorGUI.PropertyField(unitRect, property.FindPropertyRelative("unit"), GUIContent.none);
-        EditorGUI.PropertyField(nameRect, property.FindPropertyRelative("name"), GUIContent.none);
-
-        // Set indent back to what it was
-        EditorGUI.indentLevel = indent;
 
         EditorGUI.EndProperty();
     }

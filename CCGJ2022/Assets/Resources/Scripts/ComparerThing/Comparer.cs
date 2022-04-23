@@ -9,10 +9,10 @@ public class Comparer : ScriptableObject
     public Vector2 field;
 
     [RangeSlider(-10,10)]
-    public Vector2 test;
+    public RangeObject test;
 
 
     void OnValidate() {
-        Debug.Log(test);
+        Debug.Log(test.min.ToString() + ", " + test.max.ToString());
     }
 }
