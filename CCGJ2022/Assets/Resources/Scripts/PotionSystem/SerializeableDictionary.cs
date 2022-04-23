@@ -15,26 +15,32 @@ public class SerializeableDictionary<keytype ,value> : Dictionary<keytype, value
 	[SerializeField]
 	public List<DataPair> shownData = new List<DataPair>();
 
+    private bool readyToSerialize = false;
+
 	void ISerializationCallbackReceiver.OnAfterDeserialize()
 	{
-        this.Clear();
+        var buffer = new Dictionary<keytype, value>();
+        readyToSerialize = true;
         for(int i = 0;i < shownData.Count;i++)
         {
-            if(shownData[i].key != null)
-                this.Add(shownData[i].key, shownData[i].data);
+            if (shownData[i].key != null && !this.ContainsKey(shownData[i].key))
+                buffer.Add(shownData[i].key, shownData[i].data);
+            else
+            {
+                readyToSerialize = false;
+                return;
+            }
         }
+        this.Clear();
+        foreach (var pair in buffer)
+            Add(pair.Key,pair.Value);
     }
 
 	void ISerializationCallbackReceiver.OnBeforeSerialize()
 	{
-        for(int i = 0;i < shownData.Count;i++)
-        {
-            if(shownData[i].key != null)
-            {
-                shownData.RemoveAt(i);
-                i--;
-            }
-        }
+        if (!readyToSerialize)
+            return;
+        shownData.Clear();
         foreach (var item in this)
         {
             shownData.Add(new DataPair { key = item.Key, data = item.Value });

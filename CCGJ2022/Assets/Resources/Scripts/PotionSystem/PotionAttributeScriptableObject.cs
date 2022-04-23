@@ -7,4 +7,9 @@ public class PotionAttributeScriptableObject : ScriptableObject
 {
     public Sprite attributeSprite;
     public string attributeName;
+
+    public override string ToString()
+    {
+        return attributeName;
+    }
 }
