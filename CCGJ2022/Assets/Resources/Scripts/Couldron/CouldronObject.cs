@@ -5,7 +5,8 @@ using UnityEngine;
 public class CouldronObject : MonoBehaviour
 {
     public SpriteRenderer potionContents;
-    public ParticleSystem potionLiquid;
+    public ParticleSystem potionSteam;
+    public ParticleSystem potionBurst;
     public float colorLerpTime;
     private float colorLerpTimer;
     private PotionObject currentPotion;
@@ -29,8 +30,8 @@ public class CouldronObject : MonoBehaviour
         currentPotion = new PotionObject(ScriptableObject.CreateInstance<PotionAttributeCollection>(), maxIngredients);
         statsBar.Display(currentPotion.AttributeCollection);
         colorLerpTimer = colorLerpTime;
-        var main = potionLiquid.main;
-        main.startColor = Color.Lerp(Color.white,potionContents.color,0.5f);
+        potionSteam.SetStartColor(Color.Lerp(Color.white,potionContents.color,0.5f));
+        targetColor = potionContents.color;
     }
 
 
@@ -45,6 +46,8 @@ public class CouldronObject : MonoBehaviour
         c.a = a;
         targetColor = c;
         colorLerpTimer = 0f;
+        potionBurst.SetStartColor(ingredient.CalculateAverageColor());
+        potionBurst.Play();
     }
     // Update is called once per frame
 
@@ -55,8 +58,7 @@ public class CouldronObject : MonoBehaviour
         {
             colorLerpTimer += Time.deltaTime;
             potionContents.color = Color.Lerp(prevColor, targetColor, Mathf.Min(1f, colorLerpTimer / colorLerpTime));
-            var main = potionLiquid.main;
-            main.startColor = Color.Lerp(Color.white, potionContents.color, 0.5f);
+            potionSteam.SetStartColor(Color.Lerp(Color.white, potionContents.color, 0.5f));            
         }
     }
 }

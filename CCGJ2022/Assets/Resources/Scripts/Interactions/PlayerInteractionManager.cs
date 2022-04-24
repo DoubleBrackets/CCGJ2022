@@ -79,7 +79,8 @@ public class PlayerInteractionManager : MonoBehaviour
     public void SetCursorAlternate(Sprite sprite, Color color)
     {
         heldCursorAlternate.sprite = sprite;
-        heldCursorAlternate.material.color = color;
+        heldCursorAlternate.color = color;
+        heldCursorAlternate.enabled = true;
     }
 
     public void ClearHeldInteractable()
@@ -87,7 +88,7 @@ public class PlayerInteractionManager : MonoBehaviour
         heldInteractable = null;
         heldCursor.material = defaultCursorMaterial;
         heldCursor.sprite = defaultCursor;
-        heldCursorAlternate.sprite = null;
+        heldCursorAlternate.enabled = false;
     }
 
     public void LateUpdate()
