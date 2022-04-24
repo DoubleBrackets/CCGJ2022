@@ -22,6 +22,7 @@ public class PlayerInteractionManager : MonoBehaviour
     public Action<Vector2,BaseInteractable> onSingleInteract;
     public Action<Vector2, BaseInteractable> onClickDown;
     public Action<Vector2,BaseInteractable> onDragRelease;
+    public Action<Vector2,BaseInteractable> onDragBegin;
     public Action<Vector2,BaseInteractable> onDragMove;
     public Action<Vector2,BaseInteractable> onMouseMove;
 
@@ -61,6 +62,7 @@ public class PlayerInteractionManager : MonoBehaviour
             if((mousePos - startPos).magnitude > 0.05f)
             {
                 isDragging = true;
+                onDragBegin?.Invoke(mousePos, heldInteractable);
             }
         }
         if(isDragging)
