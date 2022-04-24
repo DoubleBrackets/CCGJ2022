@@ -74,6 +74,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionBound: {fileID: 4271348699915400642}
   heldSprite: {fileID: 0}
+  heldSpriteMaterial: {fileID: 0}
   sourceIngredient: {fileID: 11400000, guid: 0193470c9bb7f3c48803d0dfdfa0c141, type: 2}
   ingredientSpriteRen: {fileID: 4271348700797784517}
 --- !u!1 &4271348700797784523

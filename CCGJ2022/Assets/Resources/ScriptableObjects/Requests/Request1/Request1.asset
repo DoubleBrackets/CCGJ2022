@@ -25,7 +25,7 @@ MonoBehaviour:
       requirementList:
       - attribute: {fileID: 11400000, guid: 5018b0d2026a8ca4a9b7639922cb6131, type: 2}
         value:
-          min: 64
+          min: 39
           max: 90
   - dontask: 
     responseText: 'Reponse 2 this is a response

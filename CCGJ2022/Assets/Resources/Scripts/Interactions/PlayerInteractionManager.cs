@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 public class PlayerInteractionManager : MonoBehaviour
 {
+    public static PlayerInteractionManager instance;
     public SpriteRenderer heldCursor;
     public Sprite defaultCursor;
     public Sprite missingCursor;
@@ -11,22 +12,20 @@ public class PlayerInteractionManager : MonoBehaviour
 
     public void Awake()
     {
-        var interactables = GameObject.FindObjectsOfType<BaseInteractable>();
-        foreach(var interactable in interactables)
-        {
-            interactable.AssignContext(this);
-        }
+        instance = this;
     }
 
 
     public Action<Vector2,BaseInteractable> onInteractDown;
     public Action<Vector2,BaseInteractable> onInteractUp;
+    public Action<Vector2> onMouseMove;
 
     private BaseInteractable heldInteractable;
 
     public void Update()
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        onMouseMove?.Invoke(mousePos);
         if(Input.GetMouseButtonDown(0))
         {
             if(heldInteractable == null)

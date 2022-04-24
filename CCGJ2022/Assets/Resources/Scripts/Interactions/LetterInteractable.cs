@@ -30,7 +30,9 @@ public class LetterInteractable : BaseInteractable
         if(heldInteractable.GetType() == typeof(CauldronInteractable))
         {
             letterRenderer.sprite = closedSprite;
-            //requestManager.SubmitPotion(((CauldronInteractable)heldInteractable),this,attachedRequest);
+            requestManager.SubmitPotion(((CauldronInteractable)heldInteractable).GetPotion(),this,attachedRequest);
+            print("Submit potion");
+            Destroy(gameObject);
         }
     }
 

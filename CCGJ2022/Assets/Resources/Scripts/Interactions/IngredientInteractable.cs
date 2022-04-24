@@ -25,6 +25,7 @@ public class IngredientInteractable : BaseInteractable
 
     public void OnValidate()
     {
+        name = sourceIngredient.ingredientName;
         ingredientSpriteRen.sprite = sourceIngredient.ingredientSprite;
     }
 }

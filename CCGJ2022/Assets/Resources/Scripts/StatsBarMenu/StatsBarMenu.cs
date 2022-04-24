@@ -62,7 +62,7 @@ public class StatsBarMenu : MonoBehaviour
             }
             float change = value - scale * sliderSpeed;
 
-            slider.image.rectTransform.localScale.x += change / 100 * Time.deltaTime;
+            //slider.image.rectTransform.localScale.x += change / 100 * Time.deltaTime;
 
         }
     }

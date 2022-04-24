@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RequestScheduler : MonoBehaviour
 {
+    public RequestManager requestManager;
+
     [SerializeField] 
     public List<RequestScriptableObject> requestList;
     
@@ -44,7 +46,13 @@ public class RequestScheduler : MonoBehaviour
 
     public void GenerateRequest() {
         currentRequests.Add(requestList[requestPointer]);
+        requestManager.CreateRequest(requestList[requestPointer]);
         requestPointer += Random.Range(1, 5);
         requestPointer %= requestList.Count;
+    }
+
+    public void RemoveRequest(RequestScriptableObject request)
+    {
+        currentRequests.Remove(request);
     }
 }
