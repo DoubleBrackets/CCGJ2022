@@ -23,6 +23,6 @@ MonoBehaviour:
       amount: 15
     - attribute: {fileID: 11400000, guid: 2a401ee7f0dff8447a6907e60fda71c8, type: 2}
       amount: 5
-  ingredientSprite: {fileID: 0}
+  ingredientSprite: {fileID: -5034703955856199138, guid: 26bad599c6008314da2a5dc2e16457ac, type: 3}
   ingredientName: Alcohol
   description: 

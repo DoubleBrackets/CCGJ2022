@@ -23,6 +23,6 @@ MonoBehaviour:
       amount: 20
     - attribute: {fileID: 11400000, guid: e24299c8fc3caef49accf13ae74a2de5, type: 2}
       amount: 10
-  ingredientSprite: {fileID: 0}
+  ingredientSprite: {fileID: 957827664897649360, guid: 26bad599c6008314da2a5dc2e16457ac, type: 3}
   ingredientName: Lavender
   description: 

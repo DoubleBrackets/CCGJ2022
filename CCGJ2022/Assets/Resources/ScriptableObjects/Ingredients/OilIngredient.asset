@@ -21,6 +21,6 @@ MonoBehaviour:
       amount: 15
     - attribute: {fileID: 11400000, guid: 7b07363cc5ad4ff4cbab80803ceb260b, type: 2}
       amount: 10
-  ingredientSprite: {fileID: 0}
+  ingredientSprite: {fileID: -1178493693419063303, guid: 26bad599c6008314da2a5dc2e16457ac, type: 3}
   ingredientName: Oil
   description: 

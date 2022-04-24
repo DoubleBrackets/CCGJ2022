@@ -21,6 +21,6 @@ MonoBehaviour:
       amount: 40
     - attribute: {fileID: 11400000, guid: 2a401ee7f0dff8447a6907e60fda71c8, type: 2}
       amount: 20
-  ingredientSprite: {fileID: 0}
+  ingredientSprite: {fileID: -5523624596377891976, guid: 26bad599c6008314da2a5dc2e16457ac, type: 3}
   ingredientName: Clove
   description: 

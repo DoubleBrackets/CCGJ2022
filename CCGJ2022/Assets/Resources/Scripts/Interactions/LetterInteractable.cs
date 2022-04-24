@@ -16,6 +16,7 @@ public class LetterInteractable : BaseInteractable
 
     public override void OnInteractDownListener(Vector2 mousePos, BaseInteractable heldInteractable)
     {
+        if (!IsInBounds(mousePos)) return;
         print(letterText);
         letterRenderer.sprite = openedSprite;
         if(!isInitialRequestLetter)

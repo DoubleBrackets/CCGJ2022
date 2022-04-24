@@ -21,6 +21,6 @@ MonoBehaviour:
       amount: 20
     - attribute: {fileID: 11400000, guid: 8c6e65788435ff148ab08dd07b610d15, type: 2}
       amount: 20
-  ingredientSprite: {fileID: 0}
+  ingredientSprite: {fileID: 6263006359624345255, guid: 26bad599c6008314da2a5dc2e16457ac, type: 3}
   ingredientName: Rosemary
   description: 

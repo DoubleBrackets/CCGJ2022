@@ -19,6 +19,6 @@ MonoBehaviour:
       amount: 75
     - attribute: {fileID: 11400000, guid: 9c2534ed5b9e0af40b46572141ec7de8, type: 2}
       amount: 25
-  ingredientSprite: {fileID: 0}
+  ingredientSprite: {fileID: 3249268657948091332, guid: 26bad599c6008314da2a5dc2e16457ac, type: 3}
   ingredientName: Himalayan Salt Crystals
   description: 

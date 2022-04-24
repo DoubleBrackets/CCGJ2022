@@ -21,6 +21,6 @@ MonoBehaviour:
       amount: 5
     - attribute: {fileID: 11400000, guid: 31cc795d4fff1524a9cbdf2c3f203db5, type: 2}
       amount: 5
-  ingredientSprite: {fileID: 0}
+  ingredientSprite: {fileID: -1317983596774885118, guid: 26bad599c6008314da2a5dc2e16457ac, type: 3}
   ingredientName: Cinnamon
   description: 

@@ -21,6 +21,6 @@ MonoBehaviour:
       amount: 25
     - attribute: {fileID: 11400000, guid: 8cfcd01ae6042f3479d5bfe28fd54b8d, type: 2}
       amount: 25
-  ingredientSprite: {fileID: 0}
+  ingredientSprite: {fileID: 8894030636934345173, guid: 26bad599c6008314da2a5dc2e16457ac, type: 3}
   ingredientName: Comfrey
   description: 

@@ -21,6 +21,6 @@ MonoBehaviour:
       amount: 40
     - attribute: {fileID: 11400000, guid: 7ae11a87757ce92469daee0f6fe6d15f, type: 2}
       amount: 20
-  ingredientSprite: {fileID: 0}
+  ingredientSprite: {fileID: -3763460664066303319, guid: 26bad599c6008314da2a5dc2e16457ac, type: 3}
   ingredientName: Ground Ginger Root
   description: 

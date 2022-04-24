@@ -21,6 +21,6 @@ MonoBehaviour:
       amount: 30
     - attribute: {fileID: 11400000, guid: 31cc795d4fff1524a9cbdf2c3f203db5, type: 2}
       amount: 20
-  ingredientSprite: {fileID: 0}
+  ingredientSprite: {fileID: -8587304896081651319, guid: 26bad599c6008314da2a5dc2e16457ac, type: 3}
   ingredientName: Ground Deer Antlers
   description: 

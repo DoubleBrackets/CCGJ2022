@@ -23,6 +23,6 @@ MonoBehaviour:
       amount: 10
     - attribute: {fileID: 11400000, guid: a1d9cc65e01e2d444a66ec66821001dd, type: 2}
       amount: 10
-  ingredientSprite: {fileID: 0}
+  ingredientSprite: {fileID: -6483581946654490516, guid: 26bad599c6008314da2a5dc2e16457ac, type: 3}
   ingredientName: Dried Sage
   description: 

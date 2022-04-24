@@ -19,6 +19,6 @@ MonoBehaviour:
       amount: 80
     - attribute: {fileID: 11400000, guid: 86755b8bc46b2b14ea4af20124067ec0, type: 2}
       amount: 20
-  ingredientSprite: {fileID: 0}
+  ingredientSprite: {fileID: -7790448460745747974, guid: 26bad599c6008314da2a5dc2e16457ac, type: 3}
   ingredientName: Chamomile
   description: 

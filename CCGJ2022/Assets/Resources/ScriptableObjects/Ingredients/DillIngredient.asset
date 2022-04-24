@@ -21,6 +21,6 @@ MonoBehaviour:
       amount: 30
     - attribute: {fileID: 11400000, guid: 5018b0d2026a8ca4a9b7639922cb6131, type: 2}
       amount: 30
-  ingredientSprite: {fileID: 0}
+  ingredientSprite: {fileID: -6583141839693620183, guid: 26bad599c6008314da2a5dc2e16457ac, type: 3}
   ingredientName: Dill
   description: 
