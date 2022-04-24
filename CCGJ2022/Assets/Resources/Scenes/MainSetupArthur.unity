@@ -748,6 +748,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6611660, guid: 284b8b639e6efe14cb65d42b0f1870e9, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6611661, guid: 284b8b639e6efe14cb65d42b0f1870e9, type: 3}
+      propertyPath: TrailModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145919080, guid: 284b8b639e6efe14cb65d42b0f1870e9, type: 3}
+      propertyPath: VelocityModule.x.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145919080, guid: 284b8b639e6efe14cb65d42b0f1870e9, type: 3}
+      propertyPath: VelocityModule.x.minScalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1462516529, guid: 284b8b639e6efe14cb65d42b0f1870e9, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4009847158429194779, guid: 284b8b639e6efe14cb65d42b0f1870e9, type: 3}
       propertyPath: statsBar
       value: 

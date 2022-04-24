@@ -56,7 +56,10 @@ public class PotionAttributeCollection : ScriptableObject
         foreach (var attribute in attributeDict)
         {
             float normalized = attribute.Value / 100;
-            
+            Color.RGBToHSV(attribute.Key.attributeColor, out float mh, out float ms, out float mv);
+            h += mh * normalized;
+            s += ms * normalized;
+            v += mv * normalized;
         }
         return Color.HSVToRGB(h, s, v);
     }
