@@ -13,27 +13,60 @@ MonoBehaviour:
   m_Name: Request 4
   m_EditorClassIdentifier: 
   requestText: {fileID: 4900000, guid: 4f6ae0813e69f5b41bcc819070e98341, type: 3}
-  initialRequestText: "Hello good potion seller,\r\n\r\nSurely you must recognize
-    me, Artur, by now, not so much through my personage but through this illness
-    of mine you have so dutifully been treating the last few years. \r\n\r\nOnce
-    more, I write calling upon your skills to help recover my strength, with a bit
-    of fresh news. I am moving away. My kindly Aunt, who lives in the far countryside,
-    has volunteered to house me at her estate. With hopes that the fresh country
-    air will do my crippled lungs some good, after, of course, a great bout of hesitation,
-    my parents have solemnly agreed to the move.\r\n\r\nSo long has it been that
-    I\u2019ve had to rely on your potions, good seller, and while I am grateful for
-    their ability to purify my breaths for but a while, I do hope that this coming
-    change of life will help me conquer the accursed affliction for good.\r\n\r\nAnd
-    so it is with equal amounts bitter and sweet that I repose to you my last request
-    for a draught of my reprieve, dear potion seller, and bid you a thousand thanks
-    and pardons.\r\n"
+  initialRequestText: 'Sweet potion seller,
+
+    
+
+    I reach for your tender
+    helping hand with a matter of utmost, burning urgency. I, Jeremia, am one you
+    may have seen before, running about the docks in this languid little town, sweat
+    on my brow and the peculiar bounce of walk I have made my own over the years.
+    Yes, you may have seen me before, but now, I am so ill that I would surely be
+    unrecognizable to even those who love me with profound intimacy.
+
+    
+
+    My
+    skin now glows with the dew of a heat unknown even to the devil in his sweltering
+    dwelling. The very furnace of hell seems to have nestled itself into my core,
+    and is intent on burning me from the inside out, body and soul holistically.
+
+    
+
+    And
+    of course, because the world is generally cruel but to me even crueler, this
+    affliction has come over me at the worst possible moment: for in two days time,
+    I have a long awaited rendezvous with the most handsome man who has long been
+    an object of my affections. Yet I fear in my current condition, the heat of my
+    skin would burn him, and turn him away from me, and this coming meeting would
+    meet a pitiful end unfit to the genuine nature and fervency of my feelings.
+
+    
+
+    To
+    be fit for this long awaited moment which holds my youthful hope in its grasp,
+    I ask for your expertise.
+
+'
   responses:
   - dontask: 
     responseText: 'The potion was excellent.
 
 '
     responseRequirements:
-      requirementList: []
+      requirementList:
+      - attribute: {fileID: 11400000, guid: 86755b8bc46b2b14ea4af20124067ec0, type: 2}
+        value:
+          min: 23
+          max: 100
+      - attribute: {fileID: 11400000, guid: e24299c8fc3caef49accf13ae74a2de5, type: 2}
+        value:
+          min: 18
+          max: 100
+      - attribute: {fileID: 11400000, guid: 3a0123d901576424699639e5a83db6d6, type: 2}
+        value:
+          min: 16
+          max: 100
   - dontask: 
     responseText: The potion did not work.
     responseRequirements:

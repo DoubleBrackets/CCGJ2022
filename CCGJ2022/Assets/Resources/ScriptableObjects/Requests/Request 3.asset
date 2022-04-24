@@ -13,27 +13,50 @@ MonoBehaviour:
   m_Name: Request 3
   m_EditorClassIdentifier: 
   requestText: {fileID: 4900000, guid: 8c3706dd5728b924bbb2964df3d99d29, type: 3}
-  initialRequestText: "Hello good potion seller,\r\n\r\nSurely you must recognize
-    me, Artur, by now, not so much through my personage but through this illness
-    of mine you have so dutifully been treating the last few years. \r\n\r\nOnce
-    more, I write calling upon your skills to help recover my strength, with a bit
-    of fresh news. I am moving away. My kindly Aunt, who lives in the far countryside,
-    has volunteered to house me at her estate. With hopes that the fresh country
-    air will do my crippled lungs some good, after, of course, a great bout of hesitation,
-    my parents have solemnly agreed to the move.\r\n\r\nSo long has it been that
-    I\u2019ve had to rely on your potions, good seller, and while I am grateful for
-    their ability to purify my breaths for but a while, I do hope that this coming
-    change of life will help me conquer the accursed affliction for good.\r\n\r\nAnd
-    so it is with equal amounts bitter and sweet that I repose to you my last request
-    for a draught of my reprieve, dear potion seller, and bid you a thousand thanks
-    and pardons.\r\n"
+  initialRequestText: 'Potion Master,
+
+    
+
+    Being yourself one of an intellectual
+    practice, of which I believe much schooling is required, you may be able to understand
+    the woes and weariness of one studying law at our local institution.
+
+    
+
+    Sleep
+    evades me, in every sense of the word. I try desperately to grasp the coattails
+    of drowsiness, but pure exhaustion overwhelms me, fills my fingers with lead,
+    and leaves me awake and wearier than before. My studies for so long demanded
+    these long nights from my body, I had not realized that violated what my body
+    demanded from me until sleep had already long disappeared from my sights.
+
+    
+
+    I
+    wish to dream. Rest. Feel the sharpness of a mind freshly reset. Please, potion
+    master, make this so possible. Not only my body but my soul has been seized with
+    the anxiety of a mind perpetually awake. I seek reprieve above all else.
+
+'
   responses:
   - dontask: 
     responseText: 'The potion was excellent.
 
 '
     responseRequirements:
-      requirementList: []
+      requirementList:
+      - attribute: {fileID: 11400000, guid: 9c2534ed5b9e0af40b46572141ec7de8, type: 2}
+        value:
+          min: 19
+          max: 100
+      - attribute: {fileID: 11400000, guid: 31cc795d4fff1524a9cbdf2c3f203db5, type: 2}
+        value:
+          min: 18
+          max: 100
+      - attribute: {fileID: 11400000, guid: 8c6e65788435ff148ab08dd07b610d15, type: 2}
+        value:
+          min: 5
+          max: 100
   - dontask: 
     responseText: The potion did not work.
     responseRequirements:

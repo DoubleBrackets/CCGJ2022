@@ -17,18 +17,20 @@ public class Comparer
     [SerializeField]
     List<Requirement> requirementList = new List<Requirement>();
 
+    public int requirementsToMeet = 0;
 
     public bool Compare(PotionAttributeCollection attributes) 
     {
+        int requirementsMet = 0;
         foreach (Requirement requirement in requirementList) 
         {
             float value = 0;
             if (attributes.AttributeDict.ContainsKey(requirement.attribute)) 
                 value = attributes.AttributeDict[requirement.attribute];
-            if (!requirement.value.check(value)) 
-                return false;
+            if (requirement.value.check(value)) 
+                requirementsMet += 1;
         }
-        return true;
+        return requirementsMet >= requirementsToMeet;
     }
 }
 

@@ -13,27 +13,45 @@ MonoBehaviour:
   m_Name: Request 5
   m_EditorClassIdentifier: 
   requestText: {fileID: 4900000, guid: c856a746244242643946eaeecd0eab68, type: 3}
-  initialRequestText: "Hello good potion seller,\r\n\r\nSurely you must recognize
-    me, Artur, by now, not so much through my personage but through this illness
-    of mine you have so dutifully been treating the last few years. \r\n\r\nOnce
-    more, I write calling upon your skills to help recover my strength, with a bit
-    of fresh news. I am moving away. My kindly Aunt, who lives in the far countryside,
-    has volunteered to house me at her estate. With hopes that the fresh country
-    air will do my crippled lungs some good, after, of course, a great bout of hesitation,
-    my parents have solemnly agreed to the move.\r\n\r\nSo long has it been that
-    I\u2019ve had to rely on your potions, good seller, and while I am grateful for
-    their ability to purify my breaths for but a while, I do hope that this coming
-    change of life will help me conquer the accursed affliction for good.\r\n\r\nAnd
-    so it is with equal amounts bitter and sweet that I repose to you my last request
-    for a draught of my reprieve, dear potion seller, and bid you a thousand thanks
-    and pardons.\r\n"
+  initialRequestText: "Sir potion seller,\r\n\r\nI hope this correspondence finds
+    you well, and filled with physical and mental strength, for my request of you,
+    I fear, will require quite the exertion.\r\n\r\nYou may have heard of elderly
+    Olga, recently widowed and currently the topic of whispers throughout time. This,
+    admittedly, is I, but I beseech you to cast aside your pity and channel your
+    energy into something else this eve, for I am pursued by something that brings
+    great unrest to my old bones.\r\n\r\nIn the passing of my late husband, I have
+    begun to feel as if his presence has not yet left the halls and stairways of
+    our old abode.  This is not, I believe, the typical widower's grief. It is something
+    unnatural, an instability that echoes my footsteps. It has made me a restless,
+    wretched creature, and it is surely this increased wretchedness that has led
+    to such pitiful looks from my neighbors and strangers alike. But it is not the
+    absence, so much as the maddening lingering of my husband, that brings this about.
+    \r\n\r\nI fear my pulse is permanently erratic, my mind ineffably frazzled by
+    this lingering, ghosting presence. So I call upon you, potion seller, to bring
+    this old woman to some sense of tranquility of mind once more.\r\n"
   responses:
   - dontask: 
     responseText: 'The potion was excellent.
 
 '
     responseRequirements:
-      requirementList: []
+      requirementList:
+      - attribute: {fileID: 11400000, guid: 8c6e65788435ff148ab08dd07b610d15, type: 2}
+        value:
+          min: 13
+          max: 100
+      - attribute: {fileID: 11400000, guid: 7b07363cc5ad4ff4cbab80803ceb260b, type: 2}
+        value:
+          min: 11
+          max: 100
+      - attribute: {fileID: 11400000, guid: a1d9cc65e01e2d444a66ec66821001dd, type: 2}
+        value:
+          min: 9
+          max: 100
+      - attribute: {fileID: 11400000, guid: 5018b0d2026a8ca4a9b7639922cb6131, type: 2}
+        value:
+          min: 6
+          max: 100
   - dontask: 
     responseText: The potion did not work.
     responseRequirements:

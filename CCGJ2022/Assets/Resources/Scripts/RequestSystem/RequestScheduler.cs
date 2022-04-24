@@ -51,7 +51,7 @@ public class RequestScheduler : MonoBehaviour
     public void GenerateRequest() {
         currentRequests.Add(requestList[requestPointer]);
         owlSystem.QueueRequest(requestList[requestPointer]);
-        requestPointer += Random.Range(1, 5);
+        requestPointer += Random.Range(1, 2);
         requestPointer %= requestList.Count;
     }
 
