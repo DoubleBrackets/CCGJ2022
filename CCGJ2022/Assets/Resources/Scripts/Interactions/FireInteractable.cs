@@ -4,36 +4,21 @@ using UnityEngine;
 
 public class FireInteractable : BaseInteractable
 {
-    public CouldronObject couldron;
-    public Sprite potionLiquidSprite;
 
-    public PotionObject GetPotion()
-    {
-        return couldron.CurrentPotion;
-    }
-    public override void OnClickDownListener(Vector2 mousePos, BaseInteractable heldInteractable)
-    {
-        if (!IsInBounds(mousePos)) return;
-        interactionContext.SetHeldInteractable(this);
-    }
-
-    public override void OnDragBeginListener(Vector2 mousePos, BaseInteractable heldInteractable)
-    {
-        if (heldInteractable != this) return;
-        interactionContext.SetCursorAlternate(potionLiquidSprite, couldron.TargetColor);
-    }
 
     public override void OnDragReleaseListener(Vector2 mousePos, BaseInteractable heldInteractable)
     {
-        if (!IsInBounds(mousePos) || heldInteractable == null) return;
-        if(heldInteractable.GetType() == typeof(IngredientInteractable))
+        if (heldInteractable == null || !IsInBounds(mousePos)) return;
+        if (heldInteractable.GetType() == typeof(LetterInteractable))
         {
-            couldron.AddIngredient(((IngredientInteractable)heldInteractable).sourceIngredient);
-        }
-        // TODO : else if (heldInteractable.GetType() == typeof(Bottle))
-        {
-
+            var envelope = (LetterInteractable)heldInteractable;
+            if(envelope.Opened && !envelope.isInitialRequestLetter)
+            {
+                //Burn the fool
+                Destroy(envelope.gameObject);
+            }
         }
     }
+
 }
  

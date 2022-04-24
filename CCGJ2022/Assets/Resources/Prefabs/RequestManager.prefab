@@ -311,8 +311,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9eefff3a4364bb348946c2f8092b17ed, type: 2}
   - {fileID: 11400000, guid: 4c82b937b8c767748a9c89db47cb63dd, type: 2}
   - {fileID: 11400000, guid: 5e09545abc03a9f498c628bb43548955, type: 2}
-  requestTime: 25
-  requestDeviation: 0.2
+  requestTime: 30
+  requestDeviation: 0.1
   maxRequests: 3
   nextRequest: -1
   currentRequests: []

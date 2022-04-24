@@ -13,6 +13,11 @@ public class LetterInteractable : BaseInteractable
     public bool isInitialRequestLetter;
     private bool opened = false;
 
+    public bool Opened
+    {
+        get => opened; 
+    }
+
 
     private RequestScriptableObject attachedRequest;
 
