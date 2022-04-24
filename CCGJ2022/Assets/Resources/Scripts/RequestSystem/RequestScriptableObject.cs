@@ -13,7 +13,9 @@ public class RequestScriptableObject : ScriptableObject
 
     public void OnValidate()
     {
+#if UNITY_EDITOR
         AssetDatabase.Refresh();
+#endif
         var texts = new List<string>(requestText.ToString().Split(new string[] { "#"}, System.StringSplitOptions.RemoveEmptyEntries));
         texts = texts.Select(x => x.TrimStart(new char[] { '\r', '\n' })).ToList();
 

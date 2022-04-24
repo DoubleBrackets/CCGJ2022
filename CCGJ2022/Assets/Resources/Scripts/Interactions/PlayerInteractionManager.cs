@@ -11,12 +11,12 @@ public class PlayerInteractionManager : MonoBehaviour
     public Sprite defaultCursor;
     public Sprite missingCursor;
     public Material defaultCursorMaterial;
+    public Texture2D emptyTex;
 
     public void Awake()
     {
         instance = this;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.SetCursor(emptyTex, Vector2.zero, CursorMode.ForceSoftware);
     }
 
 
@@ -41,11 +41,10 @@ public class PlayerInteractionManager : MonoBehaviour
     public void Update()
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = new Vector2(Mathf.Clamp(mousePos.x, -24, 24), Mathf.Clamp(mousePos.y, -13.5f, 13.5f));
         onMouseMove?.Invoke(mousePos, heldInteractable);
         if(Input.GetMouseButtonDown(0) && !mouseDown)
-        {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Confined;
+        {            
             startPos = mousePos;
             mouseDown = true;
             onClickDown?.Invoke(mousePos, heldInteractable);

@@ -183,6 +183,7 @@ MonoBehaviour:
   defaultCursor: {fileID: 3445821709504244403, guid: 28fc54f1a5beae54d9c960cc13fe8361, type: 3}
   missingCursor: {fileID: -4897693670610198290, guid: 28fc54f1a5beae54d9c960cc13fe8361, type: 3}
   defaultCursorMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  emptyTex: {fileID: 2800000, guid: 8c6d4adfdac0cf74898172c9f154ecc5, type: 3}
 --- !u!1 &8116885666284405429
 GameObject:
   m_ObjectHideFlags: 0
