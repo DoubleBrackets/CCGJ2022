@@ -22,6 +22,7 @@ public class PlayerInteractionManager : MonoBehaviour
     public Action<Vector2, BaseInteractable> onClickDown;
     public Action<Vector2,BaseInteractable> onDragRelease;
     public Action<Vector2,BaseInteractable> onDragMove;
+    public Action<Vector2,BaseInteractable> onMouseMove;
 
     private BaseInteractable heldInteractable;
     private Vector2 startPos;
@@ -31,6 +32,7 @@ public class PlayerInteractionManager : MonoBehaviour
     public void Update()
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        onMouseMove?.Invoke(mousePos, heldInteractable);
         if(Input.GetMouseButtonDown(0) && !mouseDown)
         {
             Cursor.visible = false;

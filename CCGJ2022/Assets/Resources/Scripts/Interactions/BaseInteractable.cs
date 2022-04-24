@@ -22,6 +22,7 @@ public abstract class BaseInteractable : MonoBehaviour
         interactionContext.onDragMove += OnDragMoveListener;
         interactionContext.onDragRelease += OnDragReleaseListener;
         interactionContext.onSingleInteract += OnSingleInteractListener;
+        interactionContext.onMouseMove += OnMouseMoveListener;
     }
 
     public virtual void OnDestroy()
@@ -30,6 +31,7 @@ public abstract class BaseInteractable : MonoBehaviour
         interactionContext.onDragMove -= OnDragMoveListener;
         interactionContext.onDragRelease -= OnDragReleaseListener;
         interactionContext.onSingleInteract -= OnSingleInteractListener;
+        interactionContext.onMouseMove -= OnMouseMoveListener;
     }
 
     public bool IsInBounds(Vector2 pos)
@@ -41,4 +43,5 @@ public abstract class BaseInteractable : MonoBehaviour
     public virtual void OnDragMoveListener(Vector2 mousePos, BaseInteractable heldInteractable) { }
     public virtual void OnDragReleaseListener(Vector2 mousePos, BaseInteractable heldInteractable) { }
     public virtual void OnSingleInteractListener(Vector2 mousePos, BaseInteractable heldInteractable) { }
+    public virtual void OnMouseMoveListener(Vector2 mousePos, BaseInteractable heldInteractable) { }
 }
