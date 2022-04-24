@@ -439,7 +439,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4271348699915400640, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
       propertyPath: m_Name
-      value: Crow's Feather
+      value: Alcohol
       objectReference: {fileID: 0}
     - target: {fileID: 4271348699915400643, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
       propertyPath: m_RootOrder

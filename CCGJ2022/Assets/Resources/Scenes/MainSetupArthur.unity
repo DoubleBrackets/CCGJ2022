@@ -802,10 +802,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 867012531546489232, guid: 41925b9b35de3d344a960a9e650dc7a0, type: 3}
-      propertyPath: cycleTime
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8299292772593205012, guid: 41925b9b35de3d344a960a9e650dc7a0, type: 3}
       propertyPath: m_Name
       value: RequestManager

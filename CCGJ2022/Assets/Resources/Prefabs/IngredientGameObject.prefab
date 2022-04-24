@@ -358,7 +358,7 @@ MonoBehaviour:
   interactionBound: {fileID: 4271348699915400642}
   heldSprite: {fileID: 0}
   heldSpriteMaterial: {fileID: 0}
-  sourceIngredient: {fileID: 11400000, guid: 0193470c9bb7f3c48803d0dfdfa0c141, type: 2}
+  sourceIngredient: {fileID: 11400000, guid: 3b2622ac14044a84d9bcd49fb3bf1788, type: 2}
   ingredientSpriteRen: {fileID: 4271348700797784517}
   tooltipRenderer: {fileID: 6059734413546770346}
 --- !u!1 &4271348700797784523
@@ -386,7 +386,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4271348700797784523}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.8, z: 0}
+  m_LocalPosition: {x: 0, y: -0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4271348699915400643}
@@ -432,7 +432,7 @@ SpriteRenderer:
   m_SortingLayerID: -1704396829
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1342119739309141947, guid: 26bad599c6008314da2a5dc2e16457ac, type: 3}
+  m_Sprite: {fileID: -5034703955856199138, guid: 26bad599c6008314da2a5dc2e16457ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
