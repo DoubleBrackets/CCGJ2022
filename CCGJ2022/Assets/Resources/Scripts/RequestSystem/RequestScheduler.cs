@@ -52,6 +52,7 @@ public class RequestScheduler : MonoBehaviour
     }
 
     public void GenerateRequest() {
+        if (requestsToGiveToPlayerBeforeTheGameEnds.Count == 0) return;
         var nextRequestToGiveToPlayer = requestsToGiveToPlayerBeforeTheGameEnds.Dequeue();
         currentRequests.Add(nextRequestToGiveToPlayer);
         owlSystem.QueueRequest(nextRequestToGiveToPlayer);
@@ -60,9 +61,9 @@ public class RequestScheduler : MonoBehaviour
 
     public void RemoveRequest(RequestScriptableObject request)
     {
-        currentRequests.Remove(request);
         if (!request.Passed) {
             requestsToGiveToPlayerBeforeTheGameEnds.Enqueue(request);
         }
+        currentRequests.Remove(request);
     }
 }
