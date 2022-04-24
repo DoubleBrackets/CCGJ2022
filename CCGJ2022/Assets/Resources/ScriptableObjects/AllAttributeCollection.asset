@@ -13,8 +13,35 @@ MonoBehaviour:
   m_Name: AllAttributeCollection
   m_EditorClassIdentifier: 
   attributeDict:
+    totalAmount: 0
     shownData:
-    - key: {fileID: 11400000, guid: 3a0123d901576424699639e5a83db6d6, type: 2}
-      data: 0
-    - key: {fileID: 11400000, guid: 5018b0d2026a8ca4a9b7639922cb6131, type: 2}
-      data: 0
+    - attribute: {fileID: 11400000, guid: 31cc795d4fff1524a9cbdf2c3f203db5, type: 2}
+      amount: 0
+    - attribute: {fileID: 11400000, guid: a1d9cc65e01e2d444a66ec66821001dd, type: 2}
+      amount: 0
+    - attribute: {fileID: 11400000, guid: 8cfcd01ae6042f3479d5bfe28fd54b8d, type: 2}
+      amount: 0
+    - attribute: {fileID: 11400000, guid: 86755b8bc46b2b14ea4af20124067ec0, type: 2}
+      amount: 0
+    - attribute: {fileID: 11400000, guid: 2a401ee7f0dff8447a6907e60fda71c8, type: 2}
+      amount: 0
+    - attribute: {fileID: 11400000, guid: 9c2534ed5b9e0af40b46572141ec7de8, type: 2}
+      amount: 0
+    - attribute: {fileID: 11400000, guid: e24299c8fc3caef49accf13ae74a2de5, type: 2}
+      amount: 0
+    - attribute: {fileID: 11400000, guid: 8c6e65788435ff148ab08dd07b610d15, type: 2}
+      amount: 0
+    - attribute: {fileID: 11400000, guid: 0cded1223dfd52d46a84d881bea7a277, type: 2}
+      amount: 0
+    - attribute: {fileID: 11400000, guid: 5018b0d2026a8ca4a9b7639922cb6131, type: 2}
+      amount: 0
+    - attribute: {fileID: 11400000, guid: 3a0123d901576424699639e5a83db6d6, type: 2}
+      amount: 0
+    - attribute: {fileID: 11400000, guid: 74a413ca9a853b446920e37881bdb548, type: 2}
+      amount: 0
+    - attribute: {fileID: 11400000, guid: 7b07363cc5ad4ff4cbab80803ceb260b, type: 2}
+      amount: 0
+    - attribute: {fileID: 11400000, guid: 40f1825180572bd47bb688bdc76f0d08, type: 2}
+      amount: 0
+    - attribute: {fileID: 11400000, guid: 7ae11a87757ce92469daee0f6fe6d15f, type: 2}
+      amount: 0
