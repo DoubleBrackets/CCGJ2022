@@ -21,8 +21,8 @@ public class IngredientInteractable : BaseInteractable
 
     public override void OnMouseMoveListener(Vector2 mousePos, BaseInteractable heldInteractable)
     {
-        if (IsInBounds(mousePos)) tooltipRenderer.ShowTooltip(sourceIngredient);
-        else tooltipRenderer.HideTooltip(sourceIngredient);
+        if (IsInBounds(mousePos)) tooltipRenderer.ShowTooltip();
+        else tooltipRenderer.HideTooltip();
     }
 
     public void OnValidate()
