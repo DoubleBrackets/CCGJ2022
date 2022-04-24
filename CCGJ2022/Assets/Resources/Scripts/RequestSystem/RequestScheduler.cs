@@ -10,7 +10,7 @@ public class RequestScheduler : MonoBehaviour
     [SerializeField] 
     public List<RequestScriptableObject> requestList;
     
-    private Queue<RequestScriptableObject> requestsToGiveToPlayerBeforeTheGameEnds;
+    private Queue<RequestScriptableObject> requestsToGiveToPlayerBeforeTheGameEnds = new Queue<RequestScriptableObject>();
     [SerializeField]
     private float requestTime = 25f;
     [SerializeField]
