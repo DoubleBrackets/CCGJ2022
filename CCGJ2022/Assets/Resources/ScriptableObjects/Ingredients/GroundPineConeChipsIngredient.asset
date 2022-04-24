@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7948e8cf945ee449bb387c467858728, type: 3}
+  m_Name: GroundPineConeChipsIngredient
+  m_EditorClassIdentifier: 
+  attributeDict:
+    totalAmount: 100
+    shownData:
+    - attribute: {fileID: 11400000, guid: 0cded1223dfd52d46a84d881bea7a277, type: 2}
+      amount: 95
+    - attribute: {fileID: 11400000, guid: 8cfcd01ae6042f3479d5bfe28fd54b8d, type: 2}
+      amount: 5
+  ingredientSprite: {fileID: 0}
+  ingredientName: Ground Pine Cone Chips
+  description: 
