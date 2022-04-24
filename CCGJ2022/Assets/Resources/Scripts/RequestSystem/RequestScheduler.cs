@@ -10,7 +10,7 @@ public class RequestScheduler : MonoBehaviour
     [SerializeField] 
     public List<RequestScriptableObject> requestList;
     
-    private int requestPointer;
+    private Queue<RequestScriptableObject> requestsToGiveToPlayerBeforeTheGameEnds;
     [SerializeField]
     private float requestTime = 25f;
     [SerializeField]
@@ -25,7 +25,10 @@ public class RequestScheduler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        requestPointer = Random.Range(0, requestList.Count);
+       foreach (var request in requestList) 
+       {
+           requestsToGiveToPlayerBeforeTheGameEnds.Enqueue(request);
+       }
     }
 
     // Update is called once per frame
@@ -49,14 +52,17 @@ public class RequestScheduler : MonoBehaviour
     }
 
     public void GenerateRequest() {
-        currentRequests.Add(requestList[requestPointer]);
-        owlSystem.QueueRequest(requestList[requestPointer]);
-        requestPointer += Random.Range(1, 2);
-        requestPointer %= requestList.Count;
+        var nextRequestToGiveToPlayer = requestsToGiveToPlayerBeforeTheGameEnds.Dequeue();
+        currentRequests.Add(nextRequestToGiveToPlayer);
+        owlSystem.QueueRequest(nextRequestToGiveToPlayer);
+
     }
 
     public void RemoveRequest(RequestScriptableObject request)
     {
         currentRequests.Remove(request);
+        if (!request.Passed) {
+            requestsToGiveToPlayerBeforeTheGameEnds.Enqueue(request);
+        }
     }
 }

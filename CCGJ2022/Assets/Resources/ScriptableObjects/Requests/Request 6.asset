@@ -38,24 +38,47 @@ MonoBehaviour:
 
 '
     responseRequirements:
+      requirementsToMeet: 4
       requirementList:
       - attribute: {fileID: 11400000, guid: 0cded1223dfd52d46a84d881bea7a277, type: 2}
         value:
-          min: 16
+          min: 10
           max: 100
       - attribute: {fileID: 11400000, guid: e24299c8fc3caef49accf13ae74a2de5, type: 2}
         value:
-          min: 16
+          min: 10
           max: 100
       - attribute: {fileID: 11400000, guid: 9c2534ed5b9e0af40b46572141ec7de8, type: 2}
         value:
-          min: 11
+          min: 10
           max: 100
       - attribute: {fileID: 11400000, guid: 31cc795d4fff1524a9cbdf2c3f203db5, type: 2}
         value:
-          min: 5
+          min: 8
           max: 100
   - dontask: 
     responseText: The potion did not work.
     responseRequirements:
+      requirementsToMeet: 3
+      requirementList:
+      - attribute: {fileID: 11400000, guid: 0cded1223dfd52d46a84d881bea7a277, type: 2}
+        value:
+          min: 15
+          max: 100
+      - attribute: {fileID: 11400000, guid: e24299c8fc3caef49accf13ae74a2de5, type: 2}
+        value:
+          min: 15
+          max: 100
+      - attribute: {fileID: 11400000, guid: 9c2534ed5b9e0af40b46572141ec7de8, type: 2}
+        value:
+          min: 15
+          max: 100
+      - attribute: {fileID: 11400000, guid: 31cc795d4fff1524a9cbdf2c3f203db5, type: 2}
+        value:
+          min: 10
+          max: 100
+  - dontask: 
+    responseText: 
+    responseRequirements:
+      requirementsToMeet: 0
       requirementList: []

@@ -14,10 +14,11 @@ public class Comparer
         [RangeSlider(0,100)]
         public RangeObject value;
     }
+    public int requirementsToMeet = 0;
+    public bool tryAgain = false;
     [SerializeField]
     List<Requirement> requirementList = new List<Requirement>();
 
-    public int requirementsToMeet = 0;
 
     public bool Compare(PotionAttributeCollection attributes) 
     {
