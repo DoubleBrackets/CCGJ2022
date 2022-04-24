@@ -4816,7 +4816,7 @@ GameObject:
   - component: {fileID: 1145919080}
   - component: {fileID: 1145919079}
   m_Layer: 0
-  m_Name: Bubbles
+  m_Name: Steam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14462,7 +14462,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 1423c6537e1c355488f2e585d56fad68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14578,7 +14578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   potionContents: {fileID: 4009847157720468093}
-  potionLiquid: {fileID: 1145919080}
+  potionSteam: {fileID: 1145919080}
   colorLerpTime: 1
   statsBar: {fileID: 0}
 --- !u!1 &4009847158502684856

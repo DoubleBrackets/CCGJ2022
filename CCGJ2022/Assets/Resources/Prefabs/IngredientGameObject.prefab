@@ -541,4 +541,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   renderUp: 0
-  ingredient: {fileID: 0}
