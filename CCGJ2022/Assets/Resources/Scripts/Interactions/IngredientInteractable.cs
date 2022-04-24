@@ -6,6 +6,7 @@ public class IngredientInteractable : BaseInteractable
 {
     public IngredientObject sourceIngredient;
     public SpriteRenderer ingredientSpriteRen;
+    public TooltipRenderer tooltipRenderer;
 
     public void Awake()
     {
