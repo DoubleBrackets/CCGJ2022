@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class FireInteractable : BaseInteractable
 {
+    private RequestScheduler scheduler;
 
+    private void Awake()
+    {
+        scheduler = FindObjectOfType<RequestScheduler>();
+    }
 
     public override void OnDragReleaseListener(Vector2 mousePos, BaseInteractable heldInteractable)
     {
@@ -17,6 +22,13 @@ public class FireInteractable : BaseInteractable
                 //Burn the fool
                 AudioManager.PlayOneShot("burn");
                 Destroy(envelope.gameObject);
+                if (scheduler.RequestsFinished())
+                {
+                    if(FindObjectOfType<LetterInteractable>() == null)
+                    {
+                        FadeManagerScript.instance.FadeOut();
+                    }
+                }
             }
         }
     }

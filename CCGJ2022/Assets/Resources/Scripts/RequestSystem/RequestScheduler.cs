@@ -65,4 +65,9 @@ public class RequestScheduler : MonoBehaviour
             requestsToGiveToPlayerBeforeTheGameEnds.Enqueue(request);
         }
     }
+
+    public bool RequestsFinished()
+    {
+        return (currentRequests.Count == 0 && requestsToGiveToPlayerBeforeTheGameEnds.Count == 0);
+    }
 }
