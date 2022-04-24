@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RequestSceduler : MonoBehaviour
+public class RequestScheduler : MonoBehaviour
 {
     [SerializeField] 
     public List<RequestScriptableObject> requestList;
@@ -15,6 +15,7 @@ public class RequestSceduler : MonoBehaviour
     private float nextRequest = -1;
     [SerializeField]
     public List<RequestScriptableObject> currentRequests;
+
     // Start is called before the first frame update
     void Start()
     {
