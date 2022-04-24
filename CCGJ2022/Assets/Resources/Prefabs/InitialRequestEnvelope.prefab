@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionBound: {fileID: 1603051986910549471}
-  heldSprite: {fileID: -4897693670610198290, guid: 28fc54f1a5beae54d9c960cc13fe8361, type: 3}
+  heldSprite: {fileID: 1675097311839488724, guid: 28fc54f1a5beae54d9c960cc13fe8361, type: 3}
   heldSpriteMaterial: {fileID: 0}
   letterRenderer: {fileID: 1603051986910549470}
   openedSprite: {fileID: -2786951254525262433, guid: 7c76e54e5c5d662489df91d58efe0b9b, type: 3}

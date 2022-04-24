@@ -12,15 +12,10 @@ public class IngredientInteractable : BaseInteractable
         heldSprite = sourceIngredient.ingredientSprite;
         ingredientSpriteRen.sprite = sourceIngredient.ingredientSprite;
     }
-    public override void OnInteractDownListener(Vector2 mousePos, BaseInteractable heldInteractable)
+    public override void OnClickDownListener(Vector2 mousePos, BaseInteractable heldInteractable)
     {
         if (!IsInBounds(mousePos)) return;
         interactionContext.SetHeldInteractable(this);
-    }
-
-    public override void OnInteractUpListener(Vector2 mousePos, BaseInteractable heldInteractable)
-    {
-        //Do nothing
     }
 
     public void OnValidate()

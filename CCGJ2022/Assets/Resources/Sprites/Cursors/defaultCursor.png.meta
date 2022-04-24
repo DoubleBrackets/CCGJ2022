@@ -8,6 +8,9 @@ TextureImporter:
   - first:
       213: -4897693670610198290
     second: defaultCursor_1
+  - first:
+      213: 1675097311839488724
+    second: defaultCursor_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -182,6 +185,27 @@ TextureImporter:
       bones: []
       spriteID: ee0a9904e85e70cb0800000000000000
       internalID: -4897693670610198290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: defaultCursor_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da876c41242f3710800000000000000
+      internalID: 1675097311839488724
       vertices: []
       indices: 
       edges: []

@@ -10,15 +10,15 @@ public class CauldronInteractable : BaseInteractable
     {
         return couldron.CurrentPotion;
     }
-    public override void OnInteractDownListener(Vector2 mousePos, BaseInteractable heldInteractable)
+    public override void OnClickDownListener(Vector2 mousePos, BaseInteractable heldInteractable)
     {
         if (!IsInBounds(mousePos)) return;
         interactionContext.SetHeldInteractable(this);
     }
 
-    public override void OnInteractUpListener(Vector2 mousePos, BaseInteractable heldInteractable)
+    public override void OnDragReleaseListener(Vector2 mousePos, BaseInteractable heldInteractable)
     {
-        if (!IsInBounds(mousePos)) return;
+        if (!IsInBounds(mousePos) || heldInteractable == null) return;
         if(heldInteractable.GetType() == typeof(IngredientInteractable))
         {
             couldron.AddIngredient(((IngredientInteractable)heldInteractable).sourceIngredient);

@@ -18,16 +18,18 @@ public abstract class BaseInteractable : MonoBehaviour
     public void AssignContext(PlayerInteractionManager interactionContext)
     {
         this.interactionContext = interactionContext;
-        interactionContext.onInteractDown += OnInteractDownListener;
-        interactionContext.onInteractUp += OnInteractUpListener;
-        interactionContext.onMouseMove += OnInteractMouseMove;
+        interactionContext.onClickDown += OnClickDownListener;
+        interactionContext.onDragMove += OnDragMoveListener;
+        interactionContext.onDragRelease += OnDragReleaseListener;
+        interactionContext.onSingleInteract += OnSingleInteractListener;
     }
 
     public virtual void OnDestroy()
     {
-        interactionContext.onInteractDown -= OnInteractDownListener;
-        interactionContext.onInteractUp -= OnInteractUpListener;
-        interactionContext.onMouseMove -= OnInteractMouseMove;
+        interactionContext.onClickDown -= OnClickDownListener;
+        interactionContext.onDragMove -= OnDragMoveListener;
+        interactionContext.onDragRelease -= OnDragReleaseListener;
+        interactionContext.onSingleInteract -= OnSingleInteractListener;
     }
 
     public bool IsInBounds(Vector2 pos)
@@ -35,8 +37,8 @@ public abstract class BaseInteractable : MonoBehaviour
         return interactionBound.OverlapPoint(pos);
     }
 
-    public abstract void OnInteractDownListener(Vector2 mousePos, BaseInteractable heldInteractable);
-    public abstract void OnInteractUpListener(Vector2 mousePos, BaseInteractable heldInteractable);
-
-    public virtual void OnInteractMouseMove(Vector2 mouesPos) { }
+    public virtual void OnClickDownListener(Vector2 mousePos, BaseInteractable heldInteractable) { }
+    public virtual void OnDragMoveListener(Vector2 mousePos, BaseInteractable heldInteractable) { }
+    public virtual void OnDragReleaseListener(Vector2 mousePos, BaseInteractable heldInteractable) { }
+    public virtual void OnSingleInteractListener(Vector2 mousePos, BaseInteractable heldInteractable) { }
 }
