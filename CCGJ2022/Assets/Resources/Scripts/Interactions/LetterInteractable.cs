@@ -16,8 +16,7 @@ public class LetterInteractable : BaseInteractable
 
     public override void OnSingleInteractListener(Vector2 mousePos, BaseInteractable heldInteractable)
     {
-        if (!IsInBounds(mousePos)) return;
-        print(letterText);
+        if (!IsInBounds(mousePos) || !LetterDisplayManager.instance.TryDisplay(letterText)) return;
         letterRenderer.sprite = openedSprite;
         if(!isInitialRequestLetter)
         {

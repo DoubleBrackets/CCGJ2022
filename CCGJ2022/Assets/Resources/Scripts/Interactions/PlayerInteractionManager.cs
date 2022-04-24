@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 public class PlayerInteractionManager : MonoBehaviour
 {
     public static PlayerInteractionManager instance;
-    public SpriteRenderer heldCursor;
+    public Image heldCursor;
     public Sprite defaultCursor;
     public Sprite missingCursor;
     public Material defaultCursorMaterial;
@@ -68,20 +69,20 @@ public class PlayerInteractionManager : MonoBehaviour
     public void SetHeldInteractable(BaseInteractable toHold)
     {
         heldInteractable = toHold;
-        heldCursor.sharedMaterial = toHold.heldSpriteMaterial != null ? toHold.heldSpriteMaterial : defaultCursorMaterial;
+        heldCursor.material = toHold.heldSpriteMaterial != null ? toHold.heldSpriteMaterial : defaultCursorMaterial;
         heldCursor.sprite = toHold.heldSprite != null ? toHold.heldSprite : missingCursor;
     }
 
     public void ClearHeldInteractable()
     {
         heldInteractable = null;
-        heldCursor.sharedMaterial = defaultCursorMaterial;
+        heldCursor.material = defaultCursorMaterial;
         heldCursor.sprite = defaultCursor;
     }
 
     public void LateUpdate()
     {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        heldCursor.transform.position = mousePos;
+        Vector2 pos = Input.mousePosition;
+        heldCursor.rectTransform.anchoredPosition = Input.mousePosition;
     }
 }

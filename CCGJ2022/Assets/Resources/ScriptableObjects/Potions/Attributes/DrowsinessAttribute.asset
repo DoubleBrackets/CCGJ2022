@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: DrowsinessAttribute
   m_EditorClassIdentifier: 
   attributeSprite: {fileID: 0}
+  attributeColor: {r: 0.40392157, g: 0.6603089, b: 0.6627451, a: 1}
   displayName: Drowsiness
   description: 

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: ChangeAttribute
   m_EditorClassIdentifier: 
   attributeSprite: {fileID: 0}
+  attributeColor: {r: 0.4808398, g: 0.36320752, b: 1, a: 1}
   displayName: Change
   description: 

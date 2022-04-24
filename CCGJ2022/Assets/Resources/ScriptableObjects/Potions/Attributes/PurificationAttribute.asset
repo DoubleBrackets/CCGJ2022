@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: PurificationAttribute
   m_EditorClassIdentifier: 
   attributeSprite: {fileID: 0}
+  attributeColor: {r: 0.759434, g: 1, b: 0.7695982, a: 1}
   displayName: Purification
   description: 

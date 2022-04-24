@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: PassionAttribute
   m_EditorClassIdentifier: 
   attributeSprite: {fileID: 0}
+  attributeColor: {r: 1, g: 0, b: 0.16355896, a: 1}
   displayName: Passion
   description: 

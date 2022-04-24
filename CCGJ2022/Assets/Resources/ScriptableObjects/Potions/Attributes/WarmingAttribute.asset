@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: WarmingAttribute
   m_EditorClassIdentifier: 
   attributeSprite: {fileID: 0}
+  attributeColor: {r: 1, g: 0.49365726, b: 0, a: 1}
   displayName: Warming
   description: 

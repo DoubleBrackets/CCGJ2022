@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: EnergizingAttribute
   m_EditorClassIdentifier: 
   attributeSprite: {fileID: 0}
+  attributeColor: {r: 0.97885394, g: 1, b: 0, a: 1}
   displayName: Energizing
   description: 

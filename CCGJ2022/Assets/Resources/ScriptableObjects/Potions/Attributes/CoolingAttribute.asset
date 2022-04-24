@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: CoolingAttribute
   m_EditorClassIdentifier: 
   attributeSprite: {fileID: 0}
+  attributeColor: {r: 0.28773582, g: 0.9888272, b: 1, a: 1}
   displayName: Cooling
   description: 

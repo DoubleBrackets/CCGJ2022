@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: CalmingAttribute
   m_EditorClassIdentifier: 
   attributeSprite: {fileID: 0}
+  attributeColor: {r: 0.6367924, g: 1, b: 0.99651283, a: 1}
   displayName: Calming
   description: 
