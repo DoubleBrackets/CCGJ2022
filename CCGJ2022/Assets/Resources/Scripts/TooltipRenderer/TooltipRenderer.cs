@@ -22,6 +22,8 @@ public class TooltipRenderer : MonoBehaviour
         gameObject.SetActive(false);
     }
     // Start is called before the first frame update
+    private float initScale = 4f;
+
     void Start()
     {
         ingredient = gameObject.GetComponentInParent<IngredientInteractable>().sourceIngredient;
@@ -37,8 +39,8 @@ public class TooltipRenderer : MonoBehaviour
             var sprite = sliders.Last().GetComponentInChildren<SpriteRenderer>();
             var scale = sprite.transform.localScale;
             var pos = sprite.transform.position;
-            pos.x -= (100 - attribute.Value) / 40;
-            scale.x = attribute.Value / 20 + 0.2f;
+            pos.x -= (100 - attribute.Value) / 200 * initScale;
+            scale.x = initScale * attribute.Value / 100 + 0.2f;
             sprite.transform.localScale = scale;
             sprite.transform.position = pos;
             sprite.color = attribute.Key.attributeColor;

@@ -10,6 +10,7 @@ public class RequestScriptableObject : ScriptableObject
     public TextAsset requestText;
     [SerializeField]public string initialRequestText;
     [SerializeField] public List<RequestResponse> responses;
+
     public void OnValidate()
     {
         AssetDatabase.Refresh();
