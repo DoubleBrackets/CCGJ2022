@@ -6,6 +6,7 @@ public class IngredientInteractable : BaseInteractable
 {
     public IngredientObject sourceIngredient;
     public SpriteRenderer ingredientSpriteRen;
+    public TooltipRenderer tooltipRenderer;
 
     public void Awake()
     {
@@ -21,6 +22,12 @@ public class IngredientInteractable : BaseInteractable
     public override void OnInteractUpListener(Vector2 mousePos, BaseInteractable heldInteractable)
     {
         //Do nothing
+    }
+
+    public override void OnInteractMouseMove(Vector2 mouesPos)
+    {
+        if (IsInBounds(mouesPos)) tooltipRenderer.ShowTooltip(sourceIngredient);
+        else tooltipRenderer.HideTooltip(sourceIngredient);
     }
 
     public void OnValidate()
