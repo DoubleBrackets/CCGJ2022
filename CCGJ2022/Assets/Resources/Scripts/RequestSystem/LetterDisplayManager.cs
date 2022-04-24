@@ -6,6 +6,10 @@ public class LetterDisplayManager : BaseInteractable
 {
     public static LetterDisplayManager instance;
 
+    //dont ask
+    private RequestScheduler scheduler;
+    private OwlSystem owlSystem;
+
     private bool isDisplaying;
 
     public GameObject displayObject;
@@ -14,6 +18,8 @@ public class LetterDisplayManager : BaseInteractable
     private void Awake()
     {
         instance = this;
+        scheduler = FindObjectOfType<RequestScheduler>();
+        owlSystem = FindObjectOfType<OwlSystem>();
     }
 
 
@@ -29,6 +35,17 @@ public class LetterDisplayManager : BaseInteractable
     {
         displayObject.SetActive(false);
         isDisplaying = false;
+        //check for end
+        if(scheduler.RequestsFinished() && owlSystem.IsOwlSystemEmpty())
+        {
+            var find = scheduler.gameObject.GetComponentsInChildren<LetterInteractable>();
+            foreach(var found in find)
+            {
+                if (!found.Opened || found.isInitialRequestLetter)
+                    return;
+            }
+            FadeManagerScript.instance.FadeOut();
+        }
     }
 
     public bool TryDisplay(string text)

@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08e0705ffe454f04d903e598da480ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cycleTime: 22
+  cycleTime: 1
   travelTime: 3
   waitTime: 3
   preDelay: 8

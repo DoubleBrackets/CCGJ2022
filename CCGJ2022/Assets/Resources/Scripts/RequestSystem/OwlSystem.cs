@@ -21,6 +21,11 @@ public class OwlSystem : MonoBehaviour
     [SerializeField]
     private List<(RequestScriptableObject,RequestResponse)> responsesToDeliver = new List<(RequestScriptableObject, RequestResponse)> ();
 
+    public bool IsOwlSystemEmpty()
+    {
+        return requestsToDeliver.Count == 0 && responsesToDeliver.Count == 0;
+    }
+
     private void Start()
     {
         StartCoroutine(Cycle());

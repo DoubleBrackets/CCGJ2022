@@ -70,5 +70,5 @@ MonoBehaviour:
     responseText: 
     responseRequirements:
       requirementsToMeet: 0
-      tryAgain: 0
+      tryAgain: 1
       requirementList: []

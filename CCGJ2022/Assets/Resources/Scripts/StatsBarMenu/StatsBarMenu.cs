@@ -12,8 +12,8 @@ public class StatsBarMenu : MonoBehaviour
     public bool sqrt;
     [SerializeField]
     private PotionAttributeCollection allAttributes;
-    
-    private float sliderSpeed = 0.5f;
+    [SerializeField]
+    private float sliderSpeed;
     private PotionAttributeCollection attributes;
 
     private struct SliderStruct 

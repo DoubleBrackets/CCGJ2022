@@ -61,7 +61,7 @@ public class RequestScheduler : MonoBehaviour
 
     public void RemoveRequest(RequestScriptableObject request, RequestResponse response)
     {
-        if (!response.responseRequirements.tryAgain) {
+        if (response.responseRequirements.tryAgain) {
             requestsToGiveToPlayerBeforeTheGameEnds.Enqueue(request);
         }
         currentRequests.Remove(request);

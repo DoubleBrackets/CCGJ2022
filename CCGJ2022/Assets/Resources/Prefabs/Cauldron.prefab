@@ -9864,7 +9864,9 @@ MonoBehaviour:
   slider: {fileID: 4587891947927471399, guid: 1dd754876f4c8d841aa1e8924b03c26e, type: 3}
   maxSize: 20
   fixedSize: 0
+  sqrt: 0
   allAttributes: {fileID: 11400000, guid: 81e1ed19310a5424b9a9c7a8283a3d8c, type: 2}
+  sliderSpeed: 0.75
 --- !u!114 &1214151474
 MonoBehaviour:
   m_ObjectHideFlags: 0
