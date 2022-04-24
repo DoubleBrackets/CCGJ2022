@@ -49,7 +49,7 @@ MonoBehaviour:
   initialRequestPrefab: {fileID: 1603051985577873827, guid: 23c75bb6df16ee94bb75f6d5438fbb19, type: 3}
   responsePrefab: {fileID: 2134331991841865385, guid: b6c5fb591759b26499e4eaec3d51e604, type: 3}
   spawnZone: {fileID: 8299292772656432501}
-  spawnRange: 11
+  spawnRange: 4
 --- !u!114 &8299292772593205014
 MonoBehaviour:
   m_ObjectHideFlags: 0
