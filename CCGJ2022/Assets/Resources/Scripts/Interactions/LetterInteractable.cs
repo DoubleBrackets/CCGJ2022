@@ -28,12 +28,13 @@ public class LetterInteractable : BaseInteractable
 
     public override void OnDragReleaseListener(Vector2 mousePos, BaseInteractable heldInteractable)
     {
-        if (!IsInBounds(mousePos) || !isInitialRequestLetter || heldInteractable == null || !opened) return;
+        if (!IsInBounds(mousePos) || !isInitialRequestLetter || interactionContext.HeldInteractable == null || !opened) return;
         if(heldInteractable.GetType() == typeof(CauldronInteractable))
         {
             letterRenderer.sprite = closedSprite;
             requestManager.SubmitPotion(((CauldronInteractable)heldInteractable).GetPotion(),this,attachedRequest);
             print("Submit potion");
+            interactionContext.ClearHeldInteractable();
             Destroy(gameObject);
         }
     }

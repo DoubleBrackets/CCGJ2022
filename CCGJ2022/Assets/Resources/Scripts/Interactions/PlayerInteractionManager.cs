@@ -27,6 +27,12 @@ public class PlayerInteractionManager : MonoBehaviour
     public Action<Vector2,BaseInteractable> onMouseMove;
 
     private BaseInteractable heldInteractable;
+
+    public BaseInteractable HeldInteractable
+    {
+        get => heldInteractable;
+    }
+
     private Vector2 startPos;
     private bool isDragging = false;
     private bool mouseDown = false;
