@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TooltipRenderer : MonoBehaviour
 {
     public bool renderUp;
-    public IngredientObject ingredient;
+    private IngredientObject ingredient;
 
     public void ShowTooltip() 
     {
@@ -20,9 +20,10 @@ public class TooltipRenderer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ingredient = gameObject.GetComponentInParent<IngredientInteractable>().sourceIngredient;
         if (renderUp) gameObject.transform.position += new Vector3(0,4,0);
         else gameObject.transform.position += new Vector3(0,-4,0);
-        gameObject.GetComponentInChildren<Text>().text = ingredient.ingredientName;
+        gameObject.GetComponentInChildren<TMPro.TextMeshPro>().text = ingredient.ingredientName;
     }
 
     // Update is called once per frame

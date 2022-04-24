@@ -67,6 +67,7 @@ public class StatsBarMenu : MonoBehaviour
             sliders[attribute.Key].slider.transform.position += sliders.Count * new Vector3(0, -12, 0);
             sliders[attribute.Key].text.text = attribute.Key.displayName;
             sliders[attribute.Key].image.rectTransform.sizeDelta += new Vector2(-100,0);
+            sliders[attribute.Key].image.color = attribute.Key.attributeColor;
         }
     }
 
