@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1603051985577873827, guid: 23c75bb6df16ee94bb75f6d5438fbb19, type: 3}
       propertyPath: m_Name
-      value: ResponseEnvelope
+      value: ResponseEnvelope Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1603051985577873828, guid: 23c75bb6df16ee94bb75f6d5438fbb19, type: 3}
       propertyPath: m_RootOrder
@@ -56,6 +56,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1603051985577873829, guid: 23c75bb6df16ee94bb75f6d5438fbb19, type: 3}
+      propertyPath: heldSprite
+      value: 
+      objectReference: {fileID: -4897693670610198290, guid: 28fc54f1a5beae54d9c960cc13fe8361, type: 3}
+    - target: {fileID: 1603051985577873829, guid: 23c75bb6df16ee94bb75f6d5438fbb19, type: 3}
       propertyPath: closedSprite
       value: 
       objectReference: {fileID: -7579818564097781075, guid: 7c76e54e5c5d662489df91d58efe0b9b, type: 3}
@@ -67,5 +71,9 @@ PrefabInstance:
       propertyPath: isInitialRequestLetter
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1603051986910549470, guid: 23c75bb6df16ee94bb75f6d5438fbb19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7579818564097781075, guid: 7c76e54e5c5d662489df91d58efe0b9b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23c75bb6df16ee94bb75f6d5438fbb19, type: 3}
