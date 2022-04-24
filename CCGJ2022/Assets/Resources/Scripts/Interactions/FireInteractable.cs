@@ -15,6 +15,7 @@ public class FireInteractable : BaseInteractable
             if(envelope.Opened && !envelope.isInitialRequestLetter)
             {
                 //Burn the fool
+                AudioManager.PlayOneShot("burn");
                 Destroy(envelope.gameObject);
             }
         }

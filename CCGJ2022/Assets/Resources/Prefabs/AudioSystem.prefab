@@ -44,6 +44,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d518ff355e355499b66fa5e65e5cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clips:
+  - name: bottlefill
+    clip: {fileID: 8300000, guid: 31b45de1fe1a4424a8612ba6738e8215, type: 3}
+  - name: glassclink
+    clip: {fileID: 8300000, guid: 6505fd7b1c25845438c6e69ab2fdfbf4, type: 3}
+  - name: papershuffle
+    clip: {fileID: 8300000, guid: 8bffda45eb2fe5f449cc0c62b79d1d81, type: 3}
+  - name: tap1
+    clip: {fileID: 8300000, guid: e30031972af051047af5a04358c5f3b6, type: 3}
+  - name: swish2
+    clip: {fileID: 8300000, guid: 7a7740651d01c1140bd8e5fc36964633, type: 3}
+  - name: fire
+    clip: {fileID: 8300000, guid: f5aa9186b3234284aba28db565c11b09, type: 3}
 --- !u!82 &2398636492142818380
 AudioSource:
   m_ObjectHideFlags: 0

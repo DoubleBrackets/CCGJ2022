@@ -37,6 +37,7 @@ public class LetterInteractable : BaseInteractable
     public override void OnSingleInteractListener(Vector2 mousePos, BaseInteractable heldInteractable)
     {
         if (!IsInBounds(mousePos) || !LetterDisplayManager.instance.TryDisplay(letterText) || heldResponse != null) return;
+        AudioManager.PlayOneShot("papershuffle");
         letterRenderer.sprite = openedSprite;
         opened = true;
     }
@@ -48,7 +49,6 @@ public class LetterInteractable : BaseInteractable
             interactionContext.HeldInteractable == null ||
             !opened ||
             heldResponse != null) return;
-
         if (heldInteractable.GetType() == typeof(CauldronInteractable))
         {
             letterRenderer.sprite = closedSprite;
@@ -61,6 +61,7 @@ public class LetterInteractable : BaseInteractable
     {
         if (!IsInBounds(mousePos)) return;
         interactionContext.SetHeldInteractable(this);
+        AudioManager.PlayOneShot("tap1");
     }
 
     public override void OnDragMoveListener(Vector2 mousePos, BaseInteractable heldInteractable)

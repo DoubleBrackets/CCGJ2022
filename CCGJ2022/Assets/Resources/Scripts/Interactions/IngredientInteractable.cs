@@ -17,6 +17,7 @@ public class IngredientInteractable : BaseInteractable
     {
         if (!IsInBounds(mousePos)) return;
         interactionContext.SetHeldInteractable(this);
+        AudioManager.PlayOneShot("glassclink");
     }
 
     public override void OnMouseMoveListener(Vector2 mousePos, BaseInteractable heldInteractable)
