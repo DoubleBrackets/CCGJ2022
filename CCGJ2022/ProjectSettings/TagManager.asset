@@ -53,3 +53,6 @@ TagManager:
   - name: Ingredients
     uniqueID: 2590570467
     locked: 0
+  - name: Cursor
+    uniqueID: 3070231529
+    locked: 0

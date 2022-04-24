@@ -23,6 +23,6 @@ MonoBehaviour:
       amount: 5
     - attribute: {fileID: 11400000, guid: a1d9cc65e01e2d444a66ec66821001dd, type: 2}
       amount: 5
-  ingredientSprite: {fileID: 0}
+  ingredientSprite: {fileID: -5034703955856199138, guid: 26bad599c6008314da2a5dc2e16457ac, type: 3}
   ingredientName: Crow's Feather
   description: 

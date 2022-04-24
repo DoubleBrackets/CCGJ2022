@@ -4,12 +4,31 @@ using UnityEngine;
 
 public abstract class BaseInteractable : MonoBehaviour
 {
-    private PlayerInteractionManager interactionContext;
+    protected PlayerInteractionManager interactionContext;
 
-    public PlayerInteractionManager InteractionContext
+    public Collider2D interactionBound;
+    public Sprite heldSprite;
+
+    public void AssignContext(PlayerInteractionManager interactionContext)
     {
-        get => interactionContext;
-        set => interactionContext = value;
+        this.interactionContext = interactionContext;
+        interactionContext.onInteractDown += OnInteractDownListener;
+        interactionContext.onInteractUp += OnInteractUpListener;
     }
 
+    public virtual void OnDestroy()
+    {
+        interactionContext.onInteractDown -= OnInteractDownListener;
+        interactionContext.onInteractUp -= OnInteractUpListener;
+    }
+
+    public bool IsInBounds(Vector2 pos)
+    {
+        return interactionBound.OverlapPoint(pos);
+    }
+
+    public abstract void OnInteractDownListener(Vector2 mousePos, BaseInteractable heldInteractable);
+    public abstract void OnInteractUpListener(Vector2 mousePos, BaseInteractable heldInteractable);
+
+       
 }
