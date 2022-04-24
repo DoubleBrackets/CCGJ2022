@@ -9,6 +9,7 @@ public class TooltipRenderer : MonoBehaviour
     public bool renderUp;
     private IngredientObject ingredient;
     public GameObject slider;
+    public Transform sliderParent;
     private List<GameObject> sliders = new List<GameObject>();
 
     public void ShowTooltip() 
@@ -30,7 +31,7 @@ public class TooltipRenderer : MonoBehaviour
 
         foreach (var attribute in ingredient.AttributeDict) 
         {
-            sliders.Add(GameObject.Instantiate(slider, gameObject.transform));
+            sliders.Add(GameObject.Instantiate(slider, sliderParent));
             sliders.Last().transform.position += sliders.Count * new Vector3(0, -1, 0);
             sliders.Last().GetComponentInChildren<TMPro.TextMeshPro>().text = attribute.Key.displayName;
             var sprite = sliders.Last().GetComponentInChildren<SpriteRenderer>();

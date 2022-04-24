@@ -31,7 +31,7 @@ public class RequestManager : MonoBehaviour
         var envelope = Instantiate(
             toInstantiate,
             (Vector2)spawnZone.transform.position + new Vector2(Random.Range(-spawnRange, spawnRange), Random.Range(-spawnRange, spawnRange)),
-            Quaternion.Euler(0, 0, Random.Range(0, 360f)),
+            Quaternion.Euler(0, 0, Random.Range(-75f, 75f)),
             spawnZone);
         return envelope;
     }
