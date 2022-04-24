@@ -10,6 +10,7 @@ public class LetterInteractable : BaseInteractable
 
     public string letterText;
     public bool isInitialRequestLetter;
+    private bool opened = false;
 
     private RequestScriptableObject attachedRequest;
     private RequestManager requestManager;
@@ -18,6 +19,7 @@ public class LetterInteractable : BaseInteractable
     {
         if (!IsInBounds(mousePos) || !LetterDisplayManager.instance.TryDisplay(letterText)) return;
         letterRenderer.sprite = openedSprite;
+        opened = true;
         if(!isInitialRequestLetter)
         {
             Destroy(gameObject);
@@ -26,7 +28,7 @@ public class LetterInteractable : BaseInteractable
 
     public override void OnDragReleaseListener(Vector2 mousePos, BaseInteractable heldInteractable)
     {
-        if (!IsInBounds(mousePos) || !isInitialRequestLetter || heldInteractable == null) return;
+        if (!IsInBounds(mousePos) || !isInitialRequestLetter || heldInteractable == null || !opened) return;
         if(heldInteractable.GetType() == typeof(CauldronInteractable))
         {
             letterRenderer.sprite = closedSprite;

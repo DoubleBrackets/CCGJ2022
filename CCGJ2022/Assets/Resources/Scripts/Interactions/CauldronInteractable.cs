@@ -15,6 +15,11 @@ public class CauldronInteractable : BaseInteractable
     {
         if (!IsInBounds(mousePos)) return;
         interactionContext.SetHeldInteractable(this);
+    }
+
+    public override void OnDragBeginListener(Vector2 mousePos, BaseInteractable heldInteractable)
+    {
+        if (heldInteractable != this) return;
         interactionContext.SetCursorAlternate(potionLiquidSprite, couldron.TargetColor);
     }
 
