@@ -14,10 +14,9 @@ public class LetterInteractable : BaseInteractable
     private RequestScriptableObject attachedRequest;
     private RequestManager requestManager;
 
-    public override void OnInteractDownListener(Vector2 mousePos, BaseInteractable heldInteractable)
+    public override void OnSingleInteractListener(Vector2 mousePos, BaseInteractable heldInteractable)
     {
-        if (!IsInBounds(mousePos)) return;
-        print(letterText);
+        if (!IsInBounds(mousePos) || !LetterDisplayManager.instance.TryDisplay(letterText)) return;
         letterRenderer.sprite = openedSprite;
         if(!isInitialRequestLetter)
         {
@@ -25,9 +24,9 @@ public class LetterInteractable : BaseInteractable
         }
     }
 
-    public override void OnInteractUpListener(Vector2 mousePos, BaseInteractable heldInteractable)
+    public override void OnDragReleaseListener(Vector2 mousePos, BaseInteractable heldInteractable)
     {
-        if (!IsInBounds(mousePos) || !isInitialRequestLetter) return;
+        if (!IsInBounds(mousePos) || !isInitialRequestLetter || heldInteractable == null) return;
         if(heldInteractable.GetType() == typeof(CauldronInteractable))
         {
             letterRenderer.sprite = closedSprite;
@@ -35,6 +34,17 @@ public class LetterInteractable : BaseInteractable
             print("Submit potion");
             Destroy(gameObject);
         }
+    }
+    public override void OnClickDownListener(Vector2 mousePos, BaseInteractable heldInteractable)
+    {
+        if (!IsInBounds(mousePos)) return;
+        interactionContext.SetHeldInteractable(this);
+    }
+
+    public override void OnDragMoveListener(Vector2 mousePos, BaseInteractable heldInteractable)
+    {
+        if (heldInteractable != this) return;
+        transform.position = mousePos;
     }
 
     public void AssignRequest(RequestManager manager,RequestScriptableObject request,RequestResponse response = null)

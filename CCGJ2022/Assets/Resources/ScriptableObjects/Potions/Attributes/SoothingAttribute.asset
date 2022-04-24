@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: SoothingAttribute
   m_EditorClassIdentifier: 
   attributeSprite: {fileID: 0}
+  attributeColor: {r: 0.4764151, g: 1, b: 0.8917777, a: 1}
   displayName: Soothing
   description: 

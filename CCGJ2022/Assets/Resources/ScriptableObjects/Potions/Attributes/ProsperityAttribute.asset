@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: ProsperityAttribute
   m_EditorClassIdentifier: 
   attributeSprite: {fileID: 0}
+  attributeColor: {r: 1, g: 0.8788398, b: 0.1372549, a: 1}
   displayName: Prosperity
   description: 

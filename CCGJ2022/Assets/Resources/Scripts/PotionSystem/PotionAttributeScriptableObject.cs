@@ -6,6 +6,7 @@ using UnityEngine;
 public class PotionAttributeScriptableObject : ScriptableObject
 {
     public Sprite attributeSprite;
+    public Color attributeColor;
     private string attributeName;
     public string displayName;
 

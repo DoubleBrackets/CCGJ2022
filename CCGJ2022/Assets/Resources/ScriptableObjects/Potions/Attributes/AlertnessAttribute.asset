@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: AlertnessAttribute
   m_EditorClassIdentifier: 
   attributeSprite: {fileID: 0}
+  attributeColor: {r: 0.87405026, g: 1, b: 0.4481132, a: 1}
   displayName: Alertness
   description: 
