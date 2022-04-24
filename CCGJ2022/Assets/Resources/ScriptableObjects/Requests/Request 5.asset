@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6515429cdbcb734cb8f27022ab0eb73, type: 3}
+  m_Name: Request 5
+  m_EditorClassIdentifier: 
+  requestText: {fileID: 4900000, guid: c856a746244242643946eaeecd0eab68, type: 3}
+  initialRequestText: "Hello good potion seller,\r\n\r\nSurely you must recognize
+    me, Artur, by now, not so much through my personage but through this illness
+    of mine you have so dutifully been treating the last few years. \r\n\r\nOnce
+    more, I write calling upon your skills to help recover my strength, with a bit
+    of fresh news. I am moving away. My kindly Aunt, who lives in the far countryside,
+    has volunteered to house me at her estate. With hopes that the fresh country
+    air will do my crippled lungs some good, after, of course, a great bout of hesitation,
+    my parents have solemnly agreed to the move.\r\n\r\nSo long has it been that
+    I\u2019ve had to rely on your potions, good seller, and while I am grateful for
+    their ability to purify my breaths for but a while, I do hope that this coming
+    change of life will help me conquer the accursed affliction for good.\r\n\r\nAnd
+    so it is with equal amounts bitter and sweet that I repose to you my last request
+    for a draught of my reprieve, dear potion seller, and bid you a thousand thanks
+    and pardons.\r\n"
+  responses:
+  - dontask: 
+    responseText: 'The potion was excellent.
+
+'
+    responseRequirements:
+      requirementList: []
+  - dontask: 
+    responseText: The potion did not work.
+    responseRequirements:
+      requirementList: []

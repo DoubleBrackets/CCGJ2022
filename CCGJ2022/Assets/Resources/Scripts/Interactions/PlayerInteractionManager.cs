@@ -7,6 +7,7 @@ public class PlayerInteractionManager : MonoBehaviour
 {
     public static PlayerInteractionManager instance;
     public Image heldCursor;
+    public Image heldCursorAlternate;
     public Sprite defaultCursor;
     public Sprite missingCursor;
     public Material defaultCursorMaterial;
@@ -75,11 +76,18 @@ public class PlayerInteractionManager : MonoBehaviour
         heldCursor.sprite = toHold.heldSprite != null ? toHold.heldSprite : missingCursor;
     }
 
+    public void SetCursorAlternate(Sprite sprite, Color color)
+    {
+        heldCursorAlternate.sprite = sprite;
+        heldCursorAlternate.material.color = color;
+    }
+
     public void ClearHeldInteractable()
     {
         heldInteractable = null;
         heldCursor.material = defaultCursorMaterial;
         heldCursor.sprite = defaultCursor;
+        heldCursorAlternate.sprite = null;
     }
 
     public void LateUpdate()

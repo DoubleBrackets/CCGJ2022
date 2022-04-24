@@ -11,6 +11,9 @@ public class CouldronObject : MonoBehaviour
     private PotionObject currentPotion;
 
     private Color targetColor;
+
+    public Color TargetColor => targetColor;
+
     private Color prevColor;
 
     public PotionObject CurrentPotion 
