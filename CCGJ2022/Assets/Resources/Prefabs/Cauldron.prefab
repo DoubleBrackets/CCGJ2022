@@ -14580,6 +14580,7 @@ MonoBehaviour:
   potionContents: {fileID: 4009847157720468093}
   potionLiquid: {fileID: 1145919080}
   colorLerpTime: 1
+  maxIngredients: 5
   statsBar: {fileID: 0}
 --- !u!1 &4009847158502684856
 GameObject:

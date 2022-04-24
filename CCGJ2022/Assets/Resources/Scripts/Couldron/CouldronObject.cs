@@ -15,6 +15,7 @@ public class CouldronObject : MonoBehaviour
     public Color TargetColor => targetColor;
 
     private Color prevColor;
+    public int maxIngredients;
 
     public PotionObject CurrentPotion 
     {
@@ -25,7 +26,7 @@ public class CouldronObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentPotion = new PotionObject(ScriptableObject.CreateInstance<PotionAttributeCollection>());
+        currentPotion = new PotionObject(ScriptableObject.CreateInstance<PotionAttributeCollection>(), maxIngredients);
         statsBar.Display(currentPotion.AttributeCollection);
         colorLerpTimer = colorLerpTime;
         var main = potionLiquid.main;
