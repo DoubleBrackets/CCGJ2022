@@ -5,6 +5,7 @@ using UnityEngine;
 public class CauldronInteractable : BaseInteractable
 {
     public CouldronObject couldron;
+    public Sprite potionLiquidSprite;
 
     public PotionObject GetPotion()
     {
@@ -14,6 +15,7 @@ public class CauldronInteractable : BaseInteractable
     {
         if (!IsInBounds(mousePos)) return;
         interactionContext.SetHeldInteractable(this);
+        interactionContext.SetCursorAlternate(potionLiquidSprite, couldron.TargetColor);
     }
 
     public override void OnDragReleaseListener(Vector2 mousePos, BaseInteractable heldInteractable)
