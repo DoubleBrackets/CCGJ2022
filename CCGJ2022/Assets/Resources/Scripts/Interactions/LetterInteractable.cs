@@ -7,35 +7,49 @@ public class LetterInteractable : BaseInteractable
     public SpriteRenderer letterRenderer;
     public Sprite openedSprite;
     public Sprite closedSprite;
+    public Sprite filledSprite;
 
     public string letterText;
     public bool isInitialRequestLetter;
     private bool opened = false;
 
+
     private RequestScriptableObject attachedRequest;
+
+    public RequestScriptableObject AttachedRequest
+    {
+        get => attachedRequest;
+    }
+
     private RequestManager requestManager;
+
+    private RequestResponse heldResponse = null;
+    public RequestResponse HeldResponse
+    {
+        get => heldResponse;
+    }
 
     public override void OnSingleInteractListener(Vector2 mousePos, BaseInteractable heldInteractable)
     {
-        if (!IsInBounds(mousePos) || !LetterDisplayManager.instance.TryDisplay(letterText)) return;
+        if (!IsInBounds(mousePos) || !LetterDisplayManager.instance.TryDisplay(letterText) || heldResponse != null) return;
         letterRenderer.sprite = openedSprite;
         opened = true;
-        if(!isInitialRequestLetter)
-        {
-            Destroy(gameObject);
-        }
     }
 
     public override void OnDragReleaseListener(Vector2 mousePos, BaseInteractable heldInteractable)
     {
-        if (!IsInBounds(mousePos) || !isInitialRequestLetter || interactionContext.HeldInteractable == null || !opened) return;
-        if(heldInteractable.GetType() == typeof(CauldronInteractable))
+        if (!IsInBounds(mousePos) ||
+            !isInitialRequestLetter ||
+            interactionContext.HeldInteractable == null ||
+            !opened ||
+            heldResponse != null) return;
+
+        if (heldInteractable.GetType() == typeof(CauldronInteractable))
         {
             letterRenderer.sprite = closedSprite;
-            requestManager.SubmitPotion(((CauldronInteractable)heldInteractable).GetPotion(),this,attachedRequest);
-            print("Submit potion");
+            heldResponse = attachedRequest.EvaluatePotion(((CauldronInteractable)heldInteractable).GetPotion());
             interactionContext.ClearHeldInteractable();
-            Destroy(gameObject);
+            letterRenderer.sprite = filledSprite;
         }
     }
     public override void OnClickDownListener(Vector2 mousePos, BaseInteractable heldInteractable)
@@ -50,11 +64,11 @@ public class LetterInteractable : BaseInteractable
         transform.position = mousePos;
     }
 
-    public void AssignRequest(RequestManager manager,RequestScriptableObject request,RequestResponse response = null)
+    public void AssignRequest(RequestManager manager, RequestScriptableObject request, RequestResponse response = null)
     {
         requestManager = manager;
         attachedRequest = request;
-        if(isInitialRequestLetter)
+        if (isInitialRequestLetter)
         {
             letterText = request.initialRequestText;
         }
@@ -64,4 +78,4 @@ public class LetterInteractable : BaseInteractable
         }
     }
 }
- 
+
