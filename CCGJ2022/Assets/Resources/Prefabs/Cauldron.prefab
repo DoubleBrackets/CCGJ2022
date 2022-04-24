@@ -19444,6 +19444,7 @@ MonoBehaviour:
   potionSteam: {fileID: 1145919080}
   potionBurst: {fileID: 1944366946}
   colorLerpTime: 1
+  maxIngredients: 5
   statsBar: {fileID: 0}
 --- !u!1 &4009847158502684856
 GameObject:
