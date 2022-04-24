@@ -236,6 +236,7 @@ MonoBehaviour:
   heldCursor: {fileID: 1728349523}
   defaultCursor: {fileID: 3445821709504244403, guid: 28fc54f1a5beae54d9c960cc13fe8361, type: 3}
   missingCursor: {fileID: -4897693670610198290, guid: 28fc54f1a5beae54d9c960cc13fe8361, type: 3}
+  defaultCursorMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &468516790
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionBound: {fileID: 470654228}
   heldSprite: {fileID: 0}
+  heldSpriteMaterial: {fileID: 0}
   couldron: {fileID: 470654229}
 --- !u!4 &470654227
 Transform:
@@ -1363,6 +1365,9 @@ MonoBehaviour:
   maxSize: 20
   fixedSize: 0
   allAttributes: {fileID: 11400000, guid: 81e1ed19310a5424b9a9c7a8283a3d8c, type: 2}
+  poopoo:
+    totalAmount: 0
+    shownData: []
 --- !u!114 &2008003680
 MonoBehaviour:
   m_ObjectHideFlags: 0
