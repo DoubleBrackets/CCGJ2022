@@ -26,19 +26,12 @@ public class RequestScriptableObject : ScriptableObject
         }
     }
     
-    private bool passed;
-    public bool Passed
-    {
-        get => passed;
-    }
-
     private RequestResponse defaultResponse = new RequestResponse();
     public RequestResponse EvaluatePotion(PotionObject potion) 
     {
         foreach (var response in responses) 
         {
             if (response.responseRequirements.Compare(potion.AttributeCollection))
-                passed = !response.responseRequirements.tryAgain;
                 return response;
         }
         return defaultResponse;

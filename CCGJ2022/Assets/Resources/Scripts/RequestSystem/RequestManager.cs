@@ -57,7 +57,7 @@ public class RequestManager : MonoBehaviour
 
     public void SubmitPotion(RequestResponse response,LetterInteractable letter, RequestScriptableObject request)
     {
-        requestScheduler.RemoveRequest(request);
+        requestScheduler.RemoveRequest(request, response);
         owlSystem.QueueResponse(request,response);
     }
 }
