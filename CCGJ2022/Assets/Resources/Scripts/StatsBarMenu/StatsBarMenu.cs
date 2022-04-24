@@ -54,7 +54,7 @@ public class StatsBarMenu : MonoBehaviour
             var attribute = item.Key;
             var slider = item.Value;
 
-            var scale = slider.image.rectTransform.localScale.x * 100;
+            var scale = slider.image.rectTransform.sizeDelta.x * 100;
             float value = 0f;
             if (attributes.AttributeDict.ContainsKey(attribute)) 
             {
@@ -62,7 +62,7 @@ public class StatsBarMenu : MonoBehaviour
             }
             float change = value - scale * sliderSpeed;
 
-            slider.image.rectTransform.localScale.x += change / 100 * Time.deltaTime;
+            slider.image.rectTransform.sizeDelta += new Vector2(change / 100 * Time.deltaTime, 0);
 
         }
     }
