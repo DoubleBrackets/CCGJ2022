@@ -49,7 +49,7 @@ MonoBehaviour:
   initialRequestPrefab: {fileID: 1603051985577873827, guid: 23c75bb6df16ee94bb75f6d5438fbb19, type: 3}
   responsePrefab: {fileID: 2134331991841865385, guid: b6c5fb591759b26499e4eaec3d51e604, type: 3}
   spawnZone: {fileID: 8299292772656432501}
-  spawnRange: 1
+  spawnRange: 11
 --- !u!114 &8299292772593205014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,7 +63,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requestManager: {fileID: 8299292772593205017}
-  requestList: []
+  requestList:
+  - {fileID: 11400000, guid: 2b2853ea1ec0ced48abd89c9855ec3d7, type: 2}
+  - {fileID: 11400000, guid: c0876df3ad082654696117d4e9370adb, type: 2}
+  - {fileID: 11400000, guid: ba0e4b297fe88f647a84d2dece3fc8d8, type: 2}
+  - {fileID: 11400000, guid: 9eefff3a4364bb348946c2f8092b17ed, type: 2}
+  - {fileID: 11400000, guid: 4c82b937b8c767748a9c89db47cb63dd, type: 2}
+  - {fileID: 11400000, guid: 5e09545abc03a9f498c628bb43548955, type: 2}
   nextRequest: -1
   currentRequests: []
 --- !u!1 &8299292772656432498
