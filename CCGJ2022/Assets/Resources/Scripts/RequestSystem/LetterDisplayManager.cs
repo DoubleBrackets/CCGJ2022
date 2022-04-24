@@ -9,7 +9,7 @@ public class LetterDisplayManager : BaseInteractable
     private bool isDisplaying;
 
     public GameObject displayObject;
-    public Text displayText;
+    public TMPro.TextMeshProUGUI displayText;
 
     private void Awake()
     {
