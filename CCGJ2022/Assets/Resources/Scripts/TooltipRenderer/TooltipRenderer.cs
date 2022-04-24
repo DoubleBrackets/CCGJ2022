@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TooltipRenderer : MonoBehaviour
 {
+    public bool renderUp;
 
     public void ShowTooltip(IngredientObject ingredient) 
     {
@@ -17,7 +18,8 @@ public class TooltipRenderer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (renderUp) gameObject.transform.position += new Vector3(0,40,0);
+        else gameObject.transform.position += new Vector3(0,-40,0);
     }
 
     // Update is called once per frame

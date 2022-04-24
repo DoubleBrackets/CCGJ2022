@@ -19,6 +19,12 @@ public class IngredientInteractable : BaseInteractable
         interactionContext.SetHeldInteractable(this);
     }
 
+    public override void OnMouseMoveListener(Vector2 mousePos, BaseInteractable heldInteractable)
+    {
+        if (IsInBounds(mousePos)) tooltipRenderer.ShowTooltip(sourceIngredient);
+        else tooltipRenderer.HideTooltip(sourceIngredient);
+    }
+
     public void OnValidate()
     {
         name = sourceIngredient.ingredientName;
