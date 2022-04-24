@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: BasilIngredient
   m_EditorClassIdentifier: 
   attributeDict:
-    totalAmount: 0
-    shownData: []
+    totalAmount: 100
+    shownData:
+    - attribute: {fileID: 11400000, guid: 0cded1223dfd52d46a84d881bea7a277, type: 2}
+      amount: 30
+    - attribute: {fileID: 11400000, guid: 5018b0d2026a8ca4a9b7639922cb6131, type: 2}
+      amount: 50
+    - attribute: {fileID: 11400000, guid: 8c6e65788435ff148ab08dd07b610d15, type: 2}
+      amount: 20
   ingredientSprite: {fileID: 0}
-  ingredientName: 
+  ingredientName: Basil
   description: 

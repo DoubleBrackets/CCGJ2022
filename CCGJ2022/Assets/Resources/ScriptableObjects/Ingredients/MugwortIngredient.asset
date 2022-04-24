@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: MugwortIngredient
   m_EditorClassIdentifier: 
   attributeDict:
-    totalAmount: 0
-    shownData: []
+    totalAmount: 100
+    shownData:
+    - attribute: {fileID: 11400000, guid: 7b07363cc5ad4ff4cbab80803ceb260b, type: 2}
+      amount: 50
+    - attribute: {fileID: 11400000, guid: 31cc795d4fff1524a9cbdf2c3f203db5, type: 2}
+      amount: 30
+    - attribute: {fileID: 11400000, guid: a1d9cc65e01e2d444a66ec66821001dd, type: 2}
+      amount: 20
   ingredientSprite: {fileID: 0}
-  ingredientName: 
+  ingredientName: Mugworth
   description: 

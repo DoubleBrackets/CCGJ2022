@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: MarjoramIngredient
   m_EditorClassIdentifier: 
   attributeDict:
-    totalAmount: 0
-    shownData: []
+    totalAmount: 100
+    shownData:
+    - attribute: {fileID: 11400000, guid: e24299c8fc3caef49accf13ae74a2de5, type: 2}
+      amount: 90
+    - attribute: {fileID: 11400000, guid: 7ae11a87757ce92469daee0f6fe6d15f, type: 2}
+      amount: 10
   ingredientSprite: {fileID: 0}
-  ingredientName: 
+  ingredientName: Marjoram
   description: 

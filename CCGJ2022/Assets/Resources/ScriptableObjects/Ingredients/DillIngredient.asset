@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: DillIngredient
   m_EditorClassIdentifier: 
   attributeDict:
-    totalAmount: 0
-    shownData: []
+    totalAmount: 100
+    shownData:
+    - attribute: {fileID: 11400000, guid: 8c6e65788435ff148ab08dd07b610d15, type: 2}
+      amount: 40
+    - attribute: {fileID: 11400000, guid: e24299c8fc3caef49accf13ae74a2de5, type: 2}
+      amount: 30
+    - attribute: {fileID: 11400000, guid: 5018b0d2026a8ca4a9b7639922cb6131, type: 2}
+      amount: 30
   ingredientSprite: {fileID: 0}
-  ingredientName: 
+  ingredientName: Dill
   description: 

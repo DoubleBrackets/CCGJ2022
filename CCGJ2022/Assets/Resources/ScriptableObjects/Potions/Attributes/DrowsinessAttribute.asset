@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: DrowsinessAttribute
   m_EditorClassIdentifier: 
   attributeSprite: {fileID: 0}
-  displayName: 
+  displayName: Drowsiness
   description: 

@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: ChamomileIngredient
   m_EditorClassIdentifier: 
   attributeDict:
-    totalAmount: 0
-    shownData: []
+    totalAmount: 100
+    shownData:
+    - attribute: {fileID: 11400000, guid: 74a413ca9a853b446920e37881bdb548, type: 2}
+      amount: 80
+    - attribute: {fileID: 11400000, guid: 86755b8bc46b2b14ea4af20124067ec0, type: 2}
+      amount: 20
   ingredientSprite: {fileID: 0}
-  ingredientName: 
+  ingredientName: Chamomile
   description: 

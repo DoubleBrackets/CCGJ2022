@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: VerbenaIngredient
   m_EditorClassIdentifier: 
   attributeDict:
-    totalAmount: 0
-    shownData: []
+    totalAmount: 100
+    shownData:
+    - attribute: {fileID: 11400000, guid: 74a413ca9a853b446920e37881bdb548, type: 2}
+      amount: 40
+    - attribute: {fileID: 11400000, guid: a1d9cc65e01e2d444a66ec66821001dd, type: 2}
+      amount: 40
+    - attribute: {fileID: 11400000, guid: 2a401ee7f0dff8447a6907e60fda71c8, type: 2}
+      amount: 20
   ingredientSprite: {fileID: 0}
-  ingredientName: 
+  ingredientName: Verbena
   description: 

@@ -10,17 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7948e8cf945ee449bb387c467858728, type: 3}
-  m_Name: RosemaryIngredient
+  m_Name: SnakeskinIngredient
   m_EditorClassIdentifier: 
   attributeDict:
     totalAmount: 100
     shownData:
-    - attribute: {fileID: 11400000, guid: 74a413ca9a853b446920e37881bdb548, type: 2}
-      amount: 60
-    - attribute: {fileID: 11400000, guid: 2a401ee7f0dff8447a6907e60fda71c8, type: 2}
-      amount: 20
-    - attribute: {fileID: 11400000, guid: 8c6e65788435ff148ab08dd07b610d15, type: 2}
-      amount: 20
+    - attribute: {fileID: 11400000, guid: 8cfcd01ae6042f3479d5bfe28fd54b8d, type: 2}
+      amount: 90
+    - attribute: {fileID: 11400000, guid: a1d9cc65e01e2d444a66ec66821001dd, type: 2}
+      amount: 10
   ingredientSprite: {fileID: 0}
-  ingredientName: Rosemary
+  ingredientName: Snakeskin
   description: 
