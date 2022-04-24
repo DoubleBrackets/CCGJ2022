@@ -50,6 +50,7 @@ MonoBehaviour:
   letterRenderer: {fileID: 1603051986910549470}
   openedSprite: {fileID: -2786951254525262433, guid: 7c76e54e5c5d662489df91d58efe0b9b, type: 3}
   closedSprite: {fileID: 3088658754663721215, guid: 7c76e54e5c5d662489df91d58efe0b9b, type: 3}
+  filledSprite: {fileID: -3758339316839042129, guid: 7c76e54e5c5d662489df91d58efe0b9b, type: 3}
   letterText: 
   isInitialRequestLetter: 1
 --- !u!1 &1603051986910549468
@@ -122,7 +123,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1405389013
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 3088658754663721215, guid: 7c76e54e5c5d662489df91d58efe0b9b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

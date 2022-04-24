@@ -16,6 +16,7 @@ public class PlayerInteractionManager : MonoBehaviour
     {
         instance = this;
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
 
@@ -44,11 +45,12 @@ public class PlayerInteractionManager : MonoBehaviour
         if(Input.GetMouseButtonDown(0) && !mouseDown)
         {
             Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Confined;
             startPos = mousePos;
             mouseDown = true;
             onClickDown?.Invoke(mousePos, heldInteractable);
         }
-        if(Input.GetMouseButtonUp(0) && mouseDown)
+        if((Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonUp(0)) && mouseDown)
         {
             mouseDown = false;
             if (isDragging)

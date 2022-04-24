@@ -5,13 +5,17 @@ using UnityEngine;
 public class RequestScheduler : MonoBehaviour
 {
     public RequestManager requestManager;
+    public OwlSystem owlSystem;
 
     [SerializeField] 
     public List<RequestScriptableObject> requestList;
     
     private int requestPointer;
-    private float requestTime = 20f;
-    private float requestDeviation = 0.25f;
+    [SerializeField]
+    private float requestTime = 25f;
+    [SerializeField]
+    private float requestDeviation = 0.2f;
+    [SerializeField]
     private int maxRequests = 3;
     [SerializeField]
     private float nextRequest = -1;
@@ -46,7 +50,7 @@ public class RequestScheduler : MonoBehaviour
 
     public void GenerateRequest() {
         currentRequests.Add(requestList[requestPointer]);
-        requestManager.CreateRequest(requestList[requestPointer]);
+        owlSystem.QueueRequest(requestList[requestPointer]);
         requestPointer += Random.Range(1, 5);
         requestPointer %= requestList.Count;
     }

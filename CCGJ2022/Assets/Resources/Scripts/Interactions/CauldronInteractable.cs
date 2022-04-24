@@ -21,6 +21,7 @@ public class CauldronInteractable : BaseInteractable
     {
         if (heldInteractable != this) return;
         interactionContext.SetCursorAlternate(potionLiquidSprite, couldron.TargetColor);
+        AudioManager.PlayOneShot("bottlefill");
     }
 
     public override void OnDragReleaseListener(Vector2 mousePos, BaseInteractable heldInteractable)
@@ -29,6 +30,7 @@ public class CauldronInteractable : BaseInteractable
         if(heldInteractable.GetType() == typeof(IngredientInteractable))
         {
             couldron.AddIngredient(((IngredientInteractable)heldInteractable).sourceIngredient);
+            AudioManager.PlayOneShot("swish2");
         }
         // TODO : else if (heldInteractable.GetType() == typeof(Bottle))
         {
