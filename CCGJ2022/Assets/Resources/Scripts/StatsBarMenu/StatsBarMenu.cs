@@ -14,8 +14,6 @@ public class StatsBarMenu : MonoBehaviour
     
     private float sliderSpeed = 0.5f;
     private PotionAttributeCollection attributes;
-    [SerializeField]
-    public SerializeablePotionAttributeDictionary poopoo;
     sealed class MyAttribute : System.Attribute
     {
         // See the attribute guidelines at
@@ -75,7 +73,6 @@ public class StatsBarMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        poopoo = attributes.AttributeDict;
         foreach (var item in sliders) 
         {
             var attribute = item.Key;
