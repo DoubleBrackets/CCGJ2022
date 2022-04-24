@@ -9,6 +9,7 @@ public class StatsBarMenu : MonoBehaviour
     public GameObject slider;
     public int maxSize;
     public bool fixedSize;
+    public bool sqrt;
     [SerializeField]
     private PotionAttributeCollection allAttributes;
     
@@ -50,21 +51,85 @@ public class StatsBarMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (var item in sliders) 
+        if (fixedSize)
         {
-            var attribute = item.Key;
-            var slider = item.Value;
-
-            var curr = slider.image.rectTransform.sizeDelta.x - 3;
-            float value = 0f;
-            if (attributes.AttributeDict.ContainsKey(attribute)) 
+            foreach (var item in sliders) 
             {
-                value = attributes.AttributeDict[attribute];
+                var attribute = item.Key;
+                var slider = item.Value;
+
+                var curr = slider.image.rectTransform.sizeDelta.x - 3;
+                float value = 0f;
+                if (attributes.AttributeDict.ContainsKey(attribute)) 
+                {
+                    value = attributes.AttributeDict[attribute];
+                }
+                float change = (value - curr) * sliderSpeed;
+
+                slider.image.rectTransform.sizeDelta += new Vector2(change * Time.deltaTime, 0);
             }
-            float change = (value - curr) * sliderSpeed;
-
-            slider.image.rectTransform.sizeDelta += new Vector2(change * Time.deltaTime, 0);
-
         }
+        else
+        {
+            if (sqrt)
+            foreach (var item in sliders) 
+            {
+                var attribute = item.Key;
+                var slider = item.Value;
+
+                var curr = slider.image.rectTransform.sizeDelta.x - 3;
+                float value = 0f;
+                if (attributes.AttributeDict.ContainsKey(attribute)) 
+                {
+                    value = attributes.AttributeDict[attribute];
+                }
+
+                value = Mathf.Sqrt(value / 100) * 100;
+
+                float change = (value - curr) * sliderSpeed;
+
+                slider.image.rectTransform.sizeDelta += new Vector2(change * Time.deltaTime, 0);
+            }
+
+
+            else 
+            {
+                float maxVal = 0f;
+                foreach (var item in sliders) 
+                {
+                    var attribute = item.Key;
+                    var slider = item.Value;
+
+                    var curr = slider.image.rectTransform.sizeDelta.x - 3;
+                    float value = 0f;
+                    if (attributes.AttributeDict.ContainsKey(attribute)) 
+                    {
+                        value = attributes.AttributeDict[attribute];
+                    }
+
+                    maxVal = Mathf.Max(maxVal, value);
+                }
+                maxVal += 10;
+                foreach (var item in sliders) 
+                {
+                    var attribute = item.Key;
+                    var slider = item.Value;
+
+                    var curr = slider.image.rectTransform.sizeDelta.x - 3;
+                    float value = 0f;
+                    if (attributes.AttributeDict.ContainsKey(attribute)) 
+                    {
+                        value = attributes.AttributeDict[attribute];
+                    }
+
+                    value = value / maxVal * 70 + value * 0.3f;
+
+                    float change = (value - curr) * sliderSpeed;
+
+                    slider.image.rectTransform.sizeDelta += new Vector2(change * Time.deltaTime, 0);
+                }
+            }
+        }
+
     }
 }
