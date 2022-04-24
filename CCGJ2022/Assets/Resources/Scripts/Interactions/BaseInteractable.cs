@@ -8,6 +8,7 @@ public abstract class BaseInteractable : MonoBehaviour
 
     public Collider2D interactionBound;
     public Sprite heldSprite;
+    public Material heldSpriteMaterial;
 
     public void AssignContext(PlayerInteractionManager interactionContext)
     {

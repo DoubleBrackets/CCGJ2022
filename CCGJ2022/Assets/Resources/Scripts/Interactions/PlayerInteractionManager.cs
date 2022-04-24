@@ -7,6 +7,7 @@ public class PlayerInteractionManager : MonoBehaviour
     public SpriteRenderer heldCursor;
     public Sprite defaultCursor;
     public Sprite missingCursor;
+    public Material defaultCursorMaterial;
 
     public void Awake()
     {
@@ -38,6 +39,7 @@ public class PlayerInteractionManager : MonoBehaviour
                 onInteractUp?.Invoke(mousePos, heldInteractable);
                 heldInteractable = null;
                 heldCursor.sprite = defaultCursor;
+                heldCursor.sharedMaterial = defaultCursorMaterial;
             }
         }
     }
@@ -45,6 +47,7 @@ public class PlayerInteractionManager : MonoBehaviour
     public void SetHeldInteractable(BaseInteractable toHold)
     {
         heldInteractable = toHold;
+        heldCursor.sharedMaterial = toHold.heldSpriteMaterial != null ? toHold.heldSpriteMaterial : defaultCursorMaterial;
         heldCursor.sprite = toHold.heldSprite != null ? toHold.heldSprite : missingCursor;
     }
 
