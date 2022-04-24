@@ -29,9 +29,13 @@ MonoBehaviour:
     and pardons.\r\n"
   responses:
   - dontask: 
-    responseText: 'The potion was excellent.
-
-'
+    responseText: "\tMy good potion seller ! I write to you now from my Aunts country
+      estate, with the most wonderful of news. Your last potion in collaboration
+      with this exquisite wild air has left me feeling healthier and lighter than
+      ever before. No longer do my lungs ache with the exercise of walking about
+      the world. I should never be able to thank you enough for all you have done,
+      and this glorious new health you have helped bestow upon me! Praise you, my
+      dear potion seller, praise you !\r\n"
     responseRequirements:
       requirementsToMeet: 3
       tryAgain: 0
@@ -49,7 +53,13 @@ MonoBehaviour:
           min: 12
           max: 100
   - dontask: 
-    responseText: The potion did not work.
+    responseText: "\tGood potion seller! I write to you now from the country, where
+      my Aunt continues to dote and care for me. Certainly, my condition has improved
+      here among the clean air, along with your most recent concoction, although
+      the shadows of my illness still leave aches in my lungs time to time. Perhaps
+      I shall never fully conquer this ailment. The thought saddens me somewhat,
+      but for now, I will try to find contentment here. My good wishes and thanks
+      to you potion seller, for doing what you could.\r\n"
     responseRequirements:
       requirementsToMeet: 2
       tryAgain: 0
@@ -67,7 +77,12 @@ MonoBehaviour:
           min: 15
           max: 100
   - dontask: 
-    responseText: 
+    responseText: "\tDear potion seller, I write to you from the country now, although
+      I feel as if this change of scenery has done little for my health. My body
+      seems to have developed a resistance to your concoctions, as the last product
+      provided only the barest, brief release. This truly grieves me to say, but,
+      I fear that even your skills may be useless when up against this accursed affliction.
+      With that somber note, regretfully, I bid thee farewell, potion seller."
     responseRequirements:
       requirementsToMeet: 0
       tryAgain: 1
