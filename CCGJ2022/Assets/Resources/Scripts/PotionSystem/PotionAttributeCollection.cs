@@ -49,4 +49,15 @@ public class PotionAttributeCollection : ScriptableObject
             }
         }
     }
+
+    public Color CalculateAverageColor()
+    {
+        float h = 0, s = 0, v = 0;
+        foreach (var attribute in attributeDict)
+        {
+            float normalized = attribute.Value / 100;
+            
+        }
+        return Color.HSVToRGB(h, s, v);
+    }
 }
