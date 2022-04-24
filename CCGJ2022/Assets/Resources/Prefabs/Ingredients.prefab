@@ -67,6 +67,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6198073861374750714}
     m_Modifications:
+    - target: {fileID: 3141985549629500935, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.20000076
+      objectReference: {fileID: 0}
     - target: {fileID: 4271348699915400640, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
       propertyPath: m_Name
       value: Water
@@ -125,6 +129,10 @@ PrefabInstance:
       objectReference: {fileID: -534920398425935138, guid: 26bad599c6008314da2a5dc2e16457ac, type: 3}
     - target: {fileID: 4271348700797784517, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
       propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059734413546770346, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
+      propertyPath: renderUp
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -215,6 +223,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6198073861374750714}
     m_Modifications:
+    - target: {fileID: 3141985549629500935, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.30000114
+      objectReference: {fileID: 0}
     - target: {fileID: 4271348699915400640, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
       propertyPath: m_Name
       value: Ground Pine Cone Chips
@@ -439,7 +451,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4271348699915400640, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
       propertyPath: m_Name
-      value: Alcohol
+      value: Crow's Feather
       objectReference: {fileID: 0}
     - target: {fileID: 4271348699915400643, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
       propertyPath: m_RootOrder
@@ -485,6 +497,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4271348699915400669, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
+      propertyPath: sourceIngredient
+      value: 
+      objectReference: {fileID: 11400000, guid: 0193470c9bb7f3c48803d0dfdfa0c141, type: 2}
+    - target: {fileID: 4271348700797784517, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1342119739309141947, guid: 26bad599c6008314da2a5dc2e16457ac, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
 --- !u!4 &7873728478466620953 stripped
@@ -499,6 +519,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6198073861374750714}
     m_Modifications:
+    - target: {fileID: 3141985549629500935, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.39999962
+      objectReference: {fileID: 0}
     - target: {fileID: 4271348699915400640, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
       propertyPath: m_Name
       value: Snakeskin
@@ -573,6 +597,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6198073861374750714}
     m_Modifications:
+    - target: {fileID: 3141985549629500935, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.70000076
+      objectReference: {fileID: 0}
     - target: {fileID: 4271348699915400640, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
       propertyPath: m_Name
       value: Angelica
@@ -707,6 +735,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6059734413546770346, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
+      propertyPath: renderUp
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
 --- !u!4 &7873728478050269662 stripped
@@ -721,6 +753,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6198073861374750714}
     m_Modifications:
+    - target: {fileID: 3141985549629500935, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.3999996
+      objectReference: {fileID: 0}
     - target: {fileID: 4271348699915400640, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
       propertyPath: m_Name
       value: Lavender
@@ -1461,6 +1497,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6198073861374750714}
     m_Modifications:
+    - target: {fileID: 3141985549629500935, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.3000011
+      objectReference: {fileID: 0}
     - target: {fileID: 4271348699915400640, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
       propertyPath: m_Name
       value: Nutmeg
@@ -1535,6 +1575,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6198073861374750714}
     m_Modifications:
+    - target: {fileID: 3141985549629500935, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.9000015
+      objectReference: {fileID: 0}
     - target: {fileID: 4271348699915400640, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
       propertyPath: m_Name
       value: Marjoram
@@ -2053,6 +2097,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6198073861374750714}
     m_Modifications:
+    - target: {fileID: 3141985549629500935, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.8999996
+      objectReference: {fileID: 0}
     - target: {fileID: 4271348699915400640, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
       propertyPath: m_Name
       value: Himalayan Salt Crystals
@@ -2127,6 +2175,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6198073861374750714}
     m_Modifications:
+    - target: {fileID: 3141985549629500935, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.7999992
+      objectReference: {fileID: 0}
     - target: {fileID: 4271348699915400640, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
       propertyPath: m_Name
       value: Rosemary
@@ -2201,6 +2253,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6198073861374750714}
     m_Modifications:
+    - target: {fileID: 3141985549629500935, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4271348699915400640, guid: 32e9b19a98cda8e44b9134fa4fc36521, type: 3}
       propertyPath: m_Name
       value: Alcohol

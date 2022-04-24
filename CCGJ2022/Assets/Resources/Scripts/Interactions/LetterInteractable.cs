@@ -54,6 +54,7 @@ public class LetterInteractable : BaseInteractable
             letterRenderer.sprite = closedSprite;
             heldResponse = attachedRequest.EvaluatePotion(((CauldronInteractable)heldInteractable).GetPotion());
             interactionContext.ClearHeldInteractable();
+            AudioManager.PlayOneShot("sweepsfx");
             letterRenderer.sprite = filledSprite;
         }
     }

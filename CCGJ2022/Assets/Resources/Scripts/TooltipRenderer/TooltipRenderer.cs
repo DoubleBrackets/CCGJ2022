@@ -12,6 +12,10 @@ public class TooltipRenderer : MonoBehaviour
     public Transform sliderParent;
     private List<GameObject> sliders = new List<GameObject>();
 
+    public bool IsOpen
+    {
+        get { return gameObject.activeSelf; }
+    }
     public void ShowTooltip() 
     {
         gameObject.SetActive(true);

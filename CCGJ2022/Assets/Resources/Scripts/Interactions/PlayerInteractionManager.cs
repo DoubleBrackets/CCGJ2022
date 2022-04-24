@@ -50,7 +50,7 @@ public class PlayerInteractionManager : MonoBehaviour
             mouseDown = true;
             onClickDown?.Invoke(mousePos, heldInteractable);
         }
-        if((Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonUp(0)) && mouseDown)
+        if((Input.GetKeyDown(KeyCode.Escape) || !Input.GetMouseButton(0)) && mouseDown)
         {
             mouseDown = false;
             if (isDragging)

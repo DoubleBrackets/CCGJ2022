@@ -17,13 +17,23 @@ public class IngredientInteractable : BaseInteractable
     {
         if (!IsInBounds(mousePos)) return;
         interactionContext.SetHeldInteractable(this);
-        AudioManager.PlayOneShot("glassclink");
+        AudioManager.PlayOneShot("pop");
     }
 
     public override void OnMouseMoveListener(Vector2 mousePos, BaseInteractable heldInteractable)
     {
-        if (IsInBounds(mousePos)) tooltipRenderer.ShowTooltip();
-        else tooltipRenderer.HideTooltip();
+        if (IsInBounds(mousePos))
+        {
+            if(!tooltipRenderer.IsOpen)
+            {
+                AudioManager.PlayOneShot("chick");
+                tooltipRenderer.ShowTooltip();
+            }    
+        }
+        else
+        {
+            tooltipRenderer.HideTooltip();
+        }
     }
 
     public void OnValidate()

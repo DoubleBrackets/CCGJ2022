@@ -38,7 +38,9 @@ public class OwlSystem : MonoBehaviour
                 owlSprite.transform.position = Vector3.Lerp(pos1, pos2, Mathf.Min(1,timer / travelTime));
                 yield return new WaitForEndOfFrame();
             }
-            yield return new WaitForSeconds(waitTime);
+            yield return new WaitForSeconds(waitTime - 0.2f);
+            AudioManager.PlayOneShot("paperdrop");
+            yield return new WaitForSeconds(0.2f);
             //Collect
             Deliver();
 
