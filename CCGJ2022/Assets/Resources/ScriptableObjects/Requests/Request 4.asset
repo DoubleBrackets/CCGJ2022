@@ -50,7 +50,17 @@ MonoBehaviour:
 '
   responses:
   - dontask: 
-    responseText: 'The potion was excellent.
+    responseText: 'Dear potion master,
+
+      
+
+      Your potion was most excellent,
+      and suited to my needs perfectly!  I would consider it nothing short of a miracle.
+      I thank you for your irreplaceable service, and will remain eternally grateful!
+
+      
+
+      -Jeremia
 
 '
     responseRequirements:
@@ -70,7 +80,9 @@ MonoBehaviour:
           min: 12
           max: 100
   - dontask: 
-    responseText: The potion did not work.
+    responseText: "To the potions master,\r\n\r\nYour potion worked quite well, and
+      went quite a long  way improving my ailments. \r\nI thank you for your service,
+      and wish you good fortun\r\n\r\n-Jeremia\r\n"
     responseRequirements:
       requirementsToMeet: 2
       tryAgain: 0
@@ -88,7 +100,20 @@ MonoBehaviour:
           min: 15
           max: 100
   - dontask: 
-    responseText: 
+    responseText: 'Potions master,
+
+      
+
+      It is with displeasure that I
+      must tell you that your potion was of little to no effect.
+
+      Your attempt
+      is appreciated, but I pray that you improve your skills so that I may find
+      your future potions more helpful than the present ones.
+
+      
+
+      -Jeremia'
     responseRequirements:
       requirementsToMeet: 0
       tryAgain: 1

@@ -35,7 +35,7 @@ MonoBehaviour:
       ever before. No longer do my lungs ache with the exercise of walking about
       the world. I should never be able to thank you enough for all you have done,
       and this glorious new health you have helped bestow upon me! Praise you, my
-      dear potion seller, praise you !\r\n"
+      dear potion seller, praise you !\r\n\r\n-Artur\r\n"
     responseRequirements:
       requirementsToMeet: 3
       tryAgain: 0
@@ -59,7 +59,7 @@ MonoBehaviour:
       the shadows of my illness still leave aches in my lungs time to time. Perhaps
       I shall never fully conquer this ailment. The thought saddens me somewhat,
       but for now, I will try to find contentment here. My good wishes and thanks
-      to you potion seller, for doing what you could.\r\n"
+      to you potion seller, for doing what you could.\r\n\r\n-Artur\r\n"
     responseRequirements:
       requirementsToMeet: 2
       tryAgain: 0
@@ -82,7 +82,8 @@ MonoBehaviour:
       seems to have developed a resistance to your concoctions, as the last product
       provided only the barest, brief release. This truly grieves me to say, but,
       I fear that even your skills may be useless when up against this accursed affliction.
-      With that somber note, regretfully, I bid thee farewell, potion seller."
+      With that somber note, regretfully, I bid thee farewell, potion seller.\r\n   
+      \r\n-Artur"
     responseRequirements:
       requirementsToMeet: 0
       tryAgain: 1

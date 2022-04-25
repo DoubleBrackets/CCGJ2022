@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6515429cdbcb734cb8f27022ab0eb73, type: 3}
+  m_Name: Request 8
+  m_EditorClassIdentifier: 
+  requestText: {fileID: 4900000, guid: 3da8e5c0f5a0ebc4a8b4dcf463ba2997, type: 3}
+  initialRequestText: "To the esteemed potions merchant,\r\n\r\nI hope that you remember
+    our correspondence,  as I was the printer who had previously serviced you when
+    you sought to advertise your potion business through use of printed posters.
+    However, we seem to have exchanged positions this time, as it is now I who is
+    seeking your abilities.\r\n\r\nYou know me to be a dedicated worker, and I oft
+    stay overnight at my shop, choosing to sleep on the wooden workbench to squeeze
+    in the tiniest amounts of additional work. Print machines are finicky, and I
+    would loath to leave a damaged one overnight on its own. However, I find that
+    sleeping in the freezing workshop is far from ideal, and would like to find a
+    solution from you. \r\n\r\nI seek a potion that will lull me to sleep with waves
+    of drowsiness, while also granting me the warmth of the finest wood stove. With
+    those two effects, I should be calm in the freezing storm of night and will find
+    no trouble in slumbering the night away with my iron-print beauties.  \r\n\r\nQuite
+    sincerely, Derrick.\r\n"
+  responses:
+  - dontask: 
+    responseText: 'Dear potion master,
+
+      
+
+      Your potion was most excellent,
+      and suited to my needs perfectly!  I would consider it nothing short of a miracle.
+      I thank you for your irreplaceable service, and will remain eternally grateful!
+
+      
+
+      -Derrick
+
+'
+    responseRequirements:
+      requirementsToMeet: 3
+      tryAgain: 0
+      requirementList:
+      - attribute: {fileID: 11400000, guid: 2a401ee7f0dff8447a6907e60fda71c8, type: 2}
+        value:
+          min: 12
+          max: 100
+      - attribute: {fileID: 11400000, guid: 7ae11a87757ce92469daee0f6fe6d15f, type: 2}
+        value:
+          min: 12
+          max: 100
+      - attribute: {fileID: 11400000, guid: a1d9cc65e01e2d444a66ec66821001dd, type: 2}
+        value:
+          min: 12
+          max: 100
+  - dontask: 
+    responseText: "To the potions master,\r\n\r\nYour potion worked quite well, and
+      went quite a long  way improving my ailments. \r\nI thank you for your service,
+      and wish you good fortun\r\n\r\n-Derrick\r\n"
+    responseRequirements:
+      requirementsToMeet: 2
+      tryAgain: 0
+      requirementList:
+      - attribute: {fileID: 11400000, guid: 2a401ee7f0dff8447a6907e60fda71c8, type: 2}
+        value:
+          min: 15
+          max: 100
+      - attribute: {fileID: 11400000, guid: 7ae11a87757ce92469daee0f6fe6d15f, type: 2}
+        value:
+          min: 15
+          max: 100
+      - attribute: {fileID: 11400000, guid: a1d9cc65e01e2d444a66ec66821001dd, type: 2}
+        value:
+          min: 15
+          max: 100
+  - dontask: 
+    responseText: 'Potions master,
+
+      
+
+      It is with displeasure that I
+      must tell you that your potion was of little to no effect.
+
+      Your attempt
+      is appreciated, but I pray that you improve your skills so that I may find
+      your future potions more helpful than the present ones.
+
+      
+
+      -Derrick'
+    responseRequirements:
+      requirementsToMeet: 0
+      tryAgain: 1
+      requirementList: []

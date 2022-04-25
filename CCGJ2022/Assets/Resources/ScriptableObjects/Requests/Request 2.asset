@@ -60,7 +60,7 @@ MonoBehaviour:
       protection from that accursed man, so that I may fully enjoy the passion of
       my new lifes love. My darling sends her thanks to you as well, as her fondness
       for me resulted in my illness being as filled with turmoil for her as I.  A
-      million, endless thanks to you, my sweet potion seller!\r\n"
+      million, endless thanks to you, my sweet potion seller!\r\n\r\n-Amalia\r\n"
     responseRequirements:
       requirementsToMeet: 3
       tryAgain: 0
@@ -88,7 +88,7 @@ MonoBehaviour:
       as the one being directed towards me? Regardless, my love keeps me enlightened,
       and I can now embrace her with purpose, although not with the same energy I
       know I once possessed.  My thanks reach out to you, potion seller, for the
-      valiant attempt at squealing this fatigue. \r\n"
+      valiant attempt at squealing this fatigue. \r\n\r\n-Amalia\r\n"
     responseRequirements:
       requirementsToMeet: 2
       tryAgain: 0
@@ -116,7 +116,7 @@ MonoBehaviour:
       to so low a state, even with the help of your esteemed mind. Not even the sweetness
       and purity of my darling's love can protect me from such hatred. Think of me,
       potion seller, and if you are of the faith, perhaps even pray that I may not
-      spend the rest of my life bedridden from this ailment."
+      spend the rest of my life bedridden from this ailment.\r\n\r\n-Amalia"
     responseRequirements:
       requirementsToMeet: 0
       tryAgain: 1

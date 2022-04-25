@@ -40,9 +40,16 @@ MonoBehaviour:
 '
   responses:
   - dontask: 
-    responseText: 'The potion was excellent.
-
-'
+    responseText: "\tPotion seller! My good, good potion seller, I apologize for
+      not having sent word of my condition sooner, but I have been too intoxicated
+      by my recent restfulness. For almost days I lay under a much needed slumber
+      as a result of your exalted potion, and my entire being sags with the relief
+      of it.  My studies have prospered from having been worked upon by an unclouded
+      mind, and my soul soars knowing that when I lay down, sleep can now come swiftly
+      and naturally to me. A thousand thanks to you, my good potion seller. Once
+      I expire from the institute with the fruits of my, and now your own, labors,
+      should you ever need legal assistance I shall not hesitate to drop any prior
+      engagements to return this debt I now owe you.\r\n\r\n-An aspiring Law student\r\n"
     responseRequirements:
       requirementsToMeet: 3
       tryAgain: 0
@@ -60,7 +67,9 @@ MonoBehaviour:
           min: 12
           max: 100
   - dontask: 
-    responseText: The potion did not work.
+    responseText: "To the potions master,\r\n\r\nYour potion worked quite well, and
+      went quite a long  way improving my ailments. \r\nI thank you for your service,
+      and wish you good fortune.\r\n\r\n-An aspiring Law student\r\n"
     responseRequirements:
       requirementsToMeet: 2
       tryAgain: 0
@@ -78,7 +87,21 @@ MonoBehaviour:
           min: 15
           max: 100
   - dontask: 
-    responseText: 
+    responseText: 'Potions master,
+
+      
+
+      It is with displeasure that I
+      must tell you that your potion was of little to no effect.
+
+      Your attempt
+      is appreciated, but I pray that you improve your skills so that I may find
+      your future potions more helpful than the present ones.
+
+      
+
+      -An
+      aspiring Law student'
     responseRequirements:
       requirementsToMeet: 0
       tryAgain: 1

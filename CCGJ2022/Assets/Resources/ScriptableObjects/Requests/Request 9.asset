@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6515429cdbcb734cb8f27022ab0eb73, type: 3}
+  m_Name: Request 9
+  m_EditorClassIdentifier: 
+  requestText: {fileID: 4900000, guid: 0682fb5022651d04ab5d77c109389bbb, type: 3}
+  initialRequestText: "I hope this letter finds you in good condition, as I have
+    been frazzled of late and my mind scattered like the wind. Of course, this state
+    of mind happens to be the very ailment I come to you for. I find myself employed
+    as the night guard for a nearby storehouse, and as such, have the obligation
+    to be the ever-vigilant eye against the darkness.\r\n\r\nHowever, one might say
+    I am too vigilant, as I have found that I twitch and turn at every whisper of
+    the wind, and my nerves are frayed even as the night is young.  But herein lies
+    the dilemma - the night guardsman must not be too lax, lest they be rendered
+    ineffective, but if they are as scattered far and apart as I, then they are just
+    as useless! \r\n\r\nI ask you to provide some potion that will let me be a stable
+    wall against the night, ever alert but calm in my manners. Should you find this
+    paradoxical task up to your skills, I would be in your debt. Every night brings
+    me closer to my wits end, and as such I pray that you have the means to assist
+    me.\r\n\r\nAlways steadfast,\r\nJoann\r\n"
+  responses:
+  - dontask: 
+    responseText: 'Dear potion master,
+
+      
+
+      Your potion was most excellent,
+      and suited to my needs perfectly!  I would consider it nothing short of a miracle.
+      I thank you for your irreplaceable service, and will remain eternally grateful!
+
+      
+
+      -Joann
+
+'
+    responseRequirements:
+      requirementsToMeet: 3
+      tryAgain: 0
+      requirementList:
+      - attribute: {fileID: 11400000, guid: 7b07363cc5ad4ff4cbab80803ceb260b, type: 2}
+        value:
+          min: 12
+          max: 100
+      - attribute: {fileID: 11400000, guid: 31cc795d4fff1524a9cbdf2c3f203db5, type: 2}
+        value:
+          min: 12
+          max: 100
+      - attribute: {fileID: 11400000, guid: a1d9cc65e01e2d444a66ec66821001dd, type: 2}
+        value:
+          min: 12
+          max: 100
+  - dontask: 
+    responseText: "To the potions master,\r\n\r\nYour potion worked quite well, and
+      went quite a long  way improving my ailments. \r\nI thank you for your service,
+      and wish you good fortun\r\n\r\n-Joann\r\n"
+    responseRequirements:
+      requirementsToMeet: 2
+      tryAgain: 0
+      requirementList:
+      - attribute: {fileID: 11400000, guid: 7b07363cc5ad4ff4cbab80803ceb260b, type: 2}
+        value:
+          min: 15
+          max: 100
+      - attribute: {fileID: 11400000, guid: 31cc795d4fff1524a9cbdf2c3f203db5, type: 2}
+        value:
+          min: 15
+          max: 100
+      - attribute: {fileID: 11400000, guid: a1d9cc65e01e2d444a66ec66821001dd, type: 2}
+        value:
+          min: 15
+          max: 100
+  - dontask: 
+    responseText: 'Potions master,
+
+      
+
+      It is with displeasure that I
+      must tell you that your potion was of little to no effect.
+
+      Your attempt
+      is appreciated, but I pray that you improve your skills so that I may find
+      your future potions more helpful than the present ones.
+
+      
+
+      -Joann'
+    responseRequirements:
+      requirementsToMeet: 0
+      tryAgain: 1
+      requirementList: []
