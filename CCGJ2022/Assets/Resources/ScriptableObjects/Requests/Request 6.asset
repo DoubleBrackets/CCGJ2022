@@ -34,19 +34,10 @@ MonoBehaviour:
     inspire me to my own, for only then will my truth of life be restored.\r\n"
   responses:
   - dontask: 
-    responseText: 'Dear potion master,
-
-      
-
-      Your potion was most excellent,
-      and suited to my needs perfectly!  I would consider it nothing short of a miracle.
-      I thank you for your irreplaceable service, and will remain eternally grateful!
-
-      
-
-      -K
-
-'
+    responseText: "\tMy beloved potion master ! I knew above all you would understand
+      my condition and deliver me from that dreaded weariness of life. I have found
+      new purpose in artistry, and am by your hand much revived to the beauty and
+      splendor of the world! \r\n\r\n-K\r\n"
     responseRequirements:
       requirementsToMeet: 3
       tryAgain: 0
@@ -68,9 +59,11 @@ MonoBehaviour:
           min: 12
           max: 100
   - dontask: 
-    responseText: "To the potions master,\r\n\r\nYour potion worked quite well, and
-      went quite a long  way improving my ailments. \r\nI thank you for your service,
-      and wish you good fortun\r\n\r\n-K\r\n"
+    responseText: "\tSir potion seller! I write with hands that have indeed rediscovered
+      some of the vigor for the liquor of life! While I do feel the threat of drought
+      looming over my mind, your potion has undoubtedly had some effect on this embittered
+      soul of mine. Nay, do not fret, for what can we artists do but hope that our
+      works will have the desired outcome?\r\n\r\n-K\r\n"
     responseRequirements:
       requirementsToMeet: 2
       tryAgain: 0
@@ -92,20 +85,12 @@ MonoBehaviour:
           min: 15
           max: 100
   - dontask: 
-    responseText: 'Potions master,
-
-      
-
-      It is with displeasure that I
-      must tell you that your potion was of little to no effect.
-
-      Your attempt
-      is appreciated, but I pray that you improve your skills so that I may find
-      your future potions more helpful than the present ones.
-
-      
-
-      -K'
+    responseText: "\tPotion seller, it brings me unnamed sadness to inform you that
+      your potion which was sent me, has utterly failed. I feel no different than
+      before, uninspired and withered under the weight of life and lackluster, and
+      it is a dreary feeling indeed. My soul aches under the knowledge that even
+      your meticulous art is not enough to revive my soul; alas! That my being should
+      end in grey misfortune.\r\n\r\n-K"
     responseRequirements:
       requirementsToMeet: 0
       tryAgain: 1

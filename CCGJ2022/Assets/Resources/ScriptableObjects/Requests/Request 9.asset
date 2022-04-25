@@ -61,7 +61,7 @@ MonoBehaviour:
   - dontask: 
     responseText: "To the potions master,\r\n\r\nYour potion worked quite well, and
       went quite a long  way improving my ailments. \r\nI thank you for your service,
-      and wish you good fortun\r\n\r\n-Joann\r\n"
+      and wish you good fortune.\r\n\r\n-Joann\r\n"
     responseRequirements:
       requirementsToMeet: 2
       tryAgain: 0

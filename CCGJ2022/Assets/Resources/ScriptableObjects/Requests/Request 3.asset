@@ -67,9 +67,14 @@ MonoBehaviour:
           min: 12
           max: 100
   - dontask: 
-    responseText: "To the potions master,\r\n\r\nYour potion worked quite well, and
-      went quite a long  way improving my ailments. \r\nI thank you for your service,
-      and wish you good fortune.\r\n\r\n-An aspiring Law student\r\n"
+    responseText: "T\tHello again, potion seller. I write to report to you that my
+      life has undoubtedly improved somewhat since you sent over your concoction
+      to this poor, tired soul of mine. I still find myself grappling, fighting for
+      sleep, but now I more often manage to prevail where before I was met only with
+      failure. Indeed the fog slowing my mind has dissipated greatly, and while not
+      entirely I do not blame you for potion master, for I knew beforehand this affliction
+      of mine was a great foe not to be so easily vanquished.\r\n\r\n-An aspiring
+      Law student\r\n"
     responseRequirements:
       requirementsToMeet: 2
       tryAgain: 0
@@ -87,21 +92,16 @@ MonoBehaviour:
           min: 15
           max: 100
   - dontask: 
-    responseText: 'Potions master,
+    responseText: 'Potion seller, I write to you with heavy laden eyes that have
+      still yet to know the joy of sleep. The potion has failed in its purpose, my
+      restlessness and sluggishness prevails, and I mourn, wondering if I shall be
+      doomed to walk this conscious plane until I pass into the unknown. For if even
+      you have failed, I fear I shall never know peace.
 
       
 
-      It is with displeasure that I
-      must tell you that your potion was of little to no effect.
-
-      Your attempt
-      is appreciated, but I pray that you improve your skills so that I may find
-      your future potions more helpful than the present ones.
-
-      
-
-      -An
-      aspiring Law student'
+      -An aspiring
+      Law student'
     responseRequirements:
       requirementsToMeet: 0
       tryAgain: 1
