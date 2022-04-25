@@ -54,7 +54,7 @@ MonoBehaviour:
       requirementsToMeet: 3
       tryAgain: 0
       requirementList:
-      - attribute: {fileID: 11400000, guid: 9c2534ed5b9e0af40b46572141ec7de8, type: 2}
+      - attribute: {fileID: 11400000, guid: 2a401ee7f0dff8447a6907e60fda71c8, type: 2}
         value:
           min: 12
           max: 100
@@ -74,7 +74,7 @@ MonoBehaviour:
       requirementsToMeet: 2
       tryAgain: 0
       requirementList:
-      - attribute: {fileID: 11400000, guid: 9c2534ed5b9e0af40b46572141ec7de8, type: 2}
+      - attribute: {fileID: 11400000, guid: 2a401ee7f0dff8447a6907e60fda71c8, type: 2}
         value:
           min: 15
           max: 100
